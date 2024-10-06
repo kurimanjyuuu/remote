@@ -1,0 +1,25 @@
+﻿table {
+    width: 99%;
+    height: 99%;
+}
+
+.remarks {
+    width: calc(100vw - 640px);
+    height: 99%; /* textareaの高さを親要素に合わせて100%に設定 */
+    box-sizing: border-box; /* パディングとボーダーを要素の寸法に含める */
+    resize: none;
+}
+
+.thumb {
+    height: 410px;
+    width: 300px;
+    box-shadow: 0 1px 4px rgba(0,0,0, .4) inset;
+    background-image: url('../../img/Common/Upload.png');
+    background-size: contain;
+    background-position: center center;
+    background-color: #e0f7fa; /* 薄い水色の背景色を指定 */
+}
+
+input[type="file"] {
+    display: none;
+}

@@ -1,0 +1,33 @@
+﻿@* ViewModelを指定する *@
+@model LoginUserViewModel
+@{
+    ViewData["Title"] = "ログイン";
+}
+
+@section Styles {
+    <link rel="stylesheet" href="~/css/Login/login.css" asp-append-version="true" />
+}
+
+@section Scripts {
+    <script src="~/js/Login/login.js"></script>
+}
+
+<form id="trForm" class="flexbox" asp-controller="Login" asp-action="Login" method="post">
+    <img class="logo_home" src="~/img/Common/TutoReal_main.png" asp-append-version="true" alt="メインロゴ" />
+    <h1 class="display-6">～開発者創出PJ～</h1>
+    <input type="checkbox" hidden="hidden" asp-for="LoginUser.GuestKbn" />
+    <table class="w315">
+        <tr>
+            <td class="w100 tdLabel">社員番号：</td>
+            <td class="tdItem"><input type="text" asp-for="LoginUser.EmpId7" class="textbox w210" maxlength="7" /></td>
+        </tr>
+        <tr>
+            <td class="w100 tdLabel">パスワード：</td>
+            <td class="tdItem"><input type="password" asp-for="LoginUser.Password" class="textbox w210" maxlength="20" /></td>
+        </tr>
+    </table>
+    <p class="labeltext errormsg">@Model.LoginUser.ErrorMsg</p>
+    <button class="button_active w240">ログイン</button>
+    <button class="button_guest w240">ゲストログイン</button>
+    <button class="button_skill w240">スキルチェック</button>
+</form>

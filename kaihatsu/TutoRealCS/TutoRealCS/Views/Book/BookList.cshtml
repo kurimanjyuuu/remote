@@ -1,0 +1,124 @@
+﻿@* ViewModelを指定する *@
+@model BookListViewModel
+@{
+    ViewData["Title"] = "書籍一覧";
+}
+
+@section Styles {
+    <link rel="stylesheet" href="~/css/Book/booklist.css" asp-append-version="true" />
+}
+
+@section Scripts {
+    <script src="~/js/Book/booklist.js"></script>
+}
+
+<form id="trForm" class="card startform" asp-controller="Book" asp-action="Search" method="POST">
+    @* 画面全体 *@
+    <div class="maincontents-layout">
+        @* 検索条件 *@
+        <div class="card">
+            <label class="lblRegion">検索条件</label>
+            <div class="divRegion">
+                <table class="tableCommon">
+                    <tr class="trFixHeight">
+                        <td class="tdLabel">書籍名称：</td>
+                        <td class="tdItem">
+                            <input type="text" asp-for="@Model.Name" class="textbox w240" maxlength="50" />
+                        </td>
+                        <td class="tdLabel">カテゴリ：</td>
+                        <td class="tdItem" colspan="2">
+                            <div class="rowContents">
+                                @foreach (var item in Model.CategoryList)
+                                {
+                                    <label class="CheckBoxLabel">
+                                        <input type="hidden" asp-for="@item.Bitvalue" />
+                                        <input class="CheckBoxEdit CategoryCheck" type="checkbox" asp-for="@item.CheckStatus">
+                                        <span class="CheckDummy"></span>
+                                        <span class="CheckBoxLabelText">@item.Name</span>
+                                    </label>
+                                }
+                                <input type="hidden" asp-for="@Model.SelectCategory" />
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="tdLabel">キーワード：</td>
+                        <td class="tdItem">
+                            <input type="text" asp-for="@Model.KeyWord" class="textbox w240" maxlength="50" />
+                        </td>
+                        <td class="tdLabel">保管場所：</td>
+                        <td class="tdItem">
+                            <div class="rowContents">
+                                <select class="dropdown ddlDepository" asp-for="@Model.SelectDepository" asp-items="@Model.DepositoryList">
+                                    <option value=""></option>
+                                </select>
+                                <label class="CheckBoxLabel">
+                                    <input class="CheckBoxEdit LendOKCheck" type="checkbox" asp-for="@Model.OKFlg">
+                                    <span class="CheckDummy"></span>
+                                    <span class="CheckBoxLabelText">貸出可のみ</span>
+                                </label>
+                            </div>
+                        </td>
+                        <td class="tdItem">
+                            <button class="btnSearch w120">検索</button>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        @* 検索結果 *@
+        <table class="DataGrid">
+            <thead>
+                <tr>
+                    <th class="w90">表紙</th>
+                    <th class="w240">書籍名称</th>
+                    <th class="w90">カテゴリ</th>
+                    <th class="w120">保管場所</th>
+                    <th class="w240">備考</th>
+                    <th class="w280">操作選択</th>
+                </tr>
+            </thead>
+        </table>
+        <div class="data_grid">
+            <input type="hidden" asp-for="@Model.Id" />
+            <table class="DataGrid">
+                <tbody>
+                    @foreach (var datas in Model.DataList)
+                    {
+                        <tr tabindex="0">
+                            <td id="@datas.Id" class="hidden">@datas.Id</td>
+                            <td class="w90">
+                                @if (!string.IsNullOrWhiteSpace(@datas.ImageFileName))
+                                {
+                                    <img class="gridimg" src="~/img/Book/@datas.ImageFileName" asp-append-version="true" />
+                                }
+                            </td>
+                            <td class="w240 fixtd gridLeft">@datas.Name</td>
+                            <td class="w90">@Html.Raw(@datas.CategoryName)</td>
+                            <td class="w120">@Html.Raw(@datas.DepositoryName)</td>
+                            <td class="w240 fixtd gridLeft">@datas.Remarks</td>
+                            <td class="w280">
+                                <div class=" btnRowLayOut">
+                                    <button class="w103 btnDetail">詳細</button>
+                                    @if (@datas.DelFlg == "0")
+                                    {
+                                        @if (@datas.isLend)
+                                        {
+                                            <button class="w103 btnLend">貸出</button>
+                                            <button class="w103 btnReturn hidden">返却</button>
+                                        }
+                                        @if (@datas.isReturn)
+                                        {
+                                            <button class="w103 btnLend hidden">貸出</button>
+                                            <button class="w103 btnReturn">返却</button>
+                                        }
+                                    }
+                                </div>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</form>

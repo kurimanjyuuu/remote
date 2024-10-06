@@ -1,0 +1,75 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+	<PropertyGroup>
+		<TargetFramework>net8.0</TargetFramework>
+		<Nullable>enable</Nullable>
+		<ImplicitUsings>enable</ImplicitUsings>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<Compile Remove="Models\Data\**" />
+		<Compile Remove="Views\Sample\**" />
+		<Content Remove="Models\Data\**" />
+		<Content Remove="Views\Sample\**" />
+		<EmbeddedResource Remove="Models\Data\**" />
+		<EmbeddedResource Remove="Views\Sample\**" />
+		<None Remove="Models\Data\**" />
+		<None Remove="Views\Sample\**" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Compile Remove="Controllers\SampleController.cs" />
+		<Compile Remove="Models\SampleViewModel.cs" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="AutoMapper" Version="13.0.1" />
+		<PackageReference Include="Azure.Identity" Version="1.12.0" />
+		<PackageReference Include="jQuery" Version="3.7.1" />
+		<PackageReference Include="jQuery.UI.Combined" Version="1.13.3" />
+		<PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="8.0.8" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.8" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.8" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.8">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+		<PackageReference Include="NLog" Version="5.3.4" />
+		<PackageReference Include="System.Configuration.ConfigurationManager" Version="8.0.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\TutoRealBE\TutoRealBE.csproj" />
+		<ProjectReference Include="..\TutoRealBF\TutoRealBF.csproj" />
+		<ProjectReference Include="..\TutoRealBL\TutoRealBL.csproj" />
+		<ProjectReference Include="..\TutoRealCommon\TutoRealCommon.csproj" />
+		<ProjectReference Include="..\TutoRealDA\TutoRealDA.csproj" />
+		<ProjectReference Include="..\TutoRealIF\TutoRealIF.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Folder Include="Views\User\" />
+		<Folder Include="wwwroot\log\" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Content Update="Views\Book\BookRegist.cshtml">
+			<ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+			<CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+		</Content>
+		<Content Update="wwwroot\css\StandBy\standbyList.css">
+			<ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+			<CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+		</Content>
+		<Content Update="wwwroot\js\const.js">
+			<ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+			<CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+		</Content>
+	</ItemGroup>
+
+	<ItemGroup>
+		<None Update="NLog.config">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</None>
+	</ItemGroup>
+</Project>

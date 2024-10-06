@@ -1,0 +1,169 @@
+﻿/*テーブルデータ表示*/
+.data_grid {
+    display: block;
+    width: calc(100vw - 225px);
+    max-width: calc(100vw - 225px);
+    height: calc(100vh - 110px);
+    max-height: calc(100vh - 110px);
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+/*1:1.41*/
+.gridimg {
+    width: 60px;
+    height: 84px;
+}
+
+table .fixtable {
+    caption-side: bottom;
+    border-collapse: collapse;
+    table-layout: fixed; /* テーブルの幅を固定する */
+}
+
+td .fixtd {
+    word-wrap: break-word; /* 単語の途中で改行する */
+    max-width: 240px; /* テキストの最大幅を200pxに設定する */
+}
+
+button.btnDetail {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    position: relative;
+    background: #FE8C25;
+    border: 1px solid #FE8C25;
+    box-sizing: border-box;
+    padding: 0 25px 0 40px;
+    color: #fff;
+    font-size: 16px;
+    letter-spacing: 0.1em;
+    line-height: 1.3;
+    text-align: left;
+    text-decoration: none;
+    transition-duration: 0.3s;
+}
+
+    button.btnDetail:before {
+        content: '';
+        width: 8px;
+        height: 8px;
+        border: 0;
+        border-top: 2px solid #fff;
+        border-right: 2px solid #fff;
+        transform: rotate(45deg);
+        position: absolute;
+        top: 50%;
+        left: 25px;
+        margin-top: -6px;
+    }
+
+    button.btnDetail:hover {
+        background: #fff;
+        color: #FE8C25;
+    }
+
+        button.btnDetail:hover:before {
+            border-top: 2px solid #FE8C25;
+            border-right: 2px solid #FE8C25;
+        }
+
+button.btnLend {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    position: relative;
+    background: #31A568;
+    border: 1px solid #31A568;
+    box-sizing: border-box;
+    padding: 0 25px 0 40px;
+    color: #fff;
+    font-size: 16px;
+    letter-spacing: 0.1em;
+    line-height: 1.3;
+    text-align: left;
+    text-decoration: none;
+    transition-duration: 0.3s;
+}
+
+    button.btnLend:before {
+        content: '';
+        width: 8px;
+        height: 8px;
+        border: 0;
+        border-top: 2px solid #fff;
+        border-right: 2px solid #fff;
+        transform: rotate(45deg);
+        position: absolute;
+        top: 50%;
+        left: 25px;
+        margin-top: -6px;
+    }
+
+    button.btnLend:hover {
+        background: #fff;
+        color: #31A568;
+    }
+
+        button.btnLend:hover:before {
+            border-top: 2px solid #31A568;
+            border-right: 2px solid #31A568;
+        }
+
+button.btnReturn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    position: relative;
+    background: #ED1A3D;
+    border: 1px solid #ED1A3D;
+    box-sizing: border-box;
+    padding: 0 25px 0 40px;
+    color: #fff;
+    font-size: 16px;
+    letter-spacing: 0.1em;
+    line-height: 1.3;
+    text-align: left;
+    text-decoration: none;
+    transition-duration: 0.3s;
+}
+
+    button.btnReturn:before {
+        content: '';
+        width: 8px;
+        height: 8px;
+        border: 0;
+        border-top: 2px solid #fff;
+        border-right: 2px solid #fff;
+        transform: rotate(45deg);
+        position: absolute;
+        top: 50%;
+        left: 25px;
+        margin-top: -6px;
+    }
+
+    button.btnReturn:hover {
+        background: #fff;
+        color: #ED1A3D;
+    }
+
+        button.btnReturn:hover:before {
+            border-top: 2px solid #ED1A3D;
+            border-right: 2px solid #ED1A3D;
+        }
+
+.btnRowLayOut {
+    display: flex; /* Flexboxを使用して子要素を横に並べる */
+    justify-content: space-between; /* ボタン間に均等なスペースを配置 */
+    align-items: center; /* ボタンを中央揃えにする */
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.btnSearch {
+    margin-left: auto;
+    display: block;
+}

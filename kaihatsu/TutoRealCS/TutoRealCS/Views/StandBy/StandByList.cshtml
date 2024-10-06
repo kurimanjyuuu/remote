@@ -1,0 +1,74 @@
+﻿@* ViewModelを指定する *@
+@model StandByListViewModel
+@{
+    ViewData["Title"] = "戻り待機者一覧";
+}
+
+@section Styles {
+    <link rel="stylesheet" href="~/css/StandBy/standbyList.css" asp-append-version="true" />
+}
+
+@section Scripts {
+    <script src="~/js/StandBy/standbylist.js"></script>
+}
+
+<form class="card startform" asp-controller="StandBy" asp-action="Search" method="POST">
+    @* 画面全体 *@
+    <div class="maincontents-layout">
+        @* 検索条件 *@
+        <div class="card">
+            <label class="lblRegion">検索条件</label>
+            <div class="divRegion">
+                <table class="tableCommon">
+                    <tr class="trFixHeight">
+                        <td class="tdLabel">社員番号：</td>
+                        <td class="tdItem">
+                            <input type="text" asp-for="Condition.EmpId7" class="textbox w100" maxlength="7" />
+                        </td>
+                        <td class="tdLabel">姓名カナ：</td>
+                        <td class="tdItem">
+                            <input type="text" asp-for="Condition.Name" class="textbox w240" maxlength="13" />
+                        </td>
+                        <td class="tdLabel">待機期間：</td>
+                        <td class="tdItem">
+                            <div class="rowContents">
+                                <input asp-for="Condition.StartDate" class="w_calendar" type="date" />
+                                ～
+                                <input asp-for="Condition.EndDate" class="w_calendar" type="date" />
+                                <button class="btnSearch w120">検索</button>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        @* 検索結果 *@
+        <table class="DataGrid">
+            <thead>
+                <tr>
+                    <th class="w100">社員番号</th>
+                    <th class="w240">姓名</th>
+                    <th class="w120">待機開始日</th>
+                    <th class="w120">待機終了日</th>
+                    <th>メールアドレス</th>
+                </tr>
+            </thead>
+        </table>
+        <div class="data_grid">
+            <table class="DataGrid">
+                <tbody>
+                    @foreach (var datas in Model.DataList)
+                    {
+                        <tr tabindex="0">
+                            <td class="w100">@datas.EmpId7</td>
+                            <td class="w240 gridLeft">@datas.SeiKanji @datas.MeiKanji</td>
+                            <td class="w120">@datas.StartDateYMD</td>
+                            <td class="w120">@datas.EndDateYMD</td>
+                            <td class="gridLeft">@datas.MailAddress</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</form>

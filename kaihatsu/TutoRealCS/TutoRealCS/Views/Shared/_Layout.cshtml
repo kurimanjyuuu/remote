@@ -1,0 +1,81 @@
+﻿<!DOCTYPE html>
+<html lang="jp">
+<head>
+    <title>@ViewData["Title"] - TutoReal</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    @*個別CSS・個別JS*@
+
+    @* CSS *@
+    <link rel="stylesheet" href="~/css/common.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    @* JS *@
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/const.js"></script>
+    <script src="~/js/common.js"></script>
+    @* モーダル *@
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    @RenderSection("Styles", required: false)
+    @RenderSection("Scripts", required: false)
+</head>
+<body>
+    @if (ViewBag.Head)
+    {
+        <header class="header">
+            <img class="logo_head" src="~/img/Common/TutoReal_main.png" asp-append-version="true" alt="tutoreallogo" />
+            <h1 class="header-title">@ViewData["Title"]</h1>
+            <label class="loginUser">@ViewBag.LoginUser</label>
+            <div class="usermenu">
+                <img src="~/img/Common/UserIcon.jpg" class="usericon">
+                <div class="userlist">
+                    <a href="#settings">パスワード変更</a>
+                    <a asp-controller="Login" asp-action="Logout">ログアウト</a>
+                </div>
+            </div>
+        </header>
+    }
+    <div class="mainContents">
+        @if (ViewBag.Menu)
+        {
+            <div class="flex-menu">
+                <input type="checkbox" id="toggle-default" class="toggle">
+                <label for="toggle-default" class="menu-label">標準機能</label>
+                <div class="submenu">
+                    <ul class="maker-none">
+                        <li class="menu-list"><button id="BookRegist" data-controller="Book" data-action="Index" class="side_button">登録</button></li>
+                        <li class="menu-list"><button id="StandByList" data-controller="StandBy" data-action="Index" class="side_button">検索</button></li>
+                        <li class="menu-list"><button id="BookList" data-controller="Book" data-action="Search" class="side_button">検索+データ連携</button></li>
+                        <li class="menu-list"><button id="MasterManage" data-controller="MasterManage" data-action="Index" class="side_button">一括登録</button></li>
+                    </ul>
+                </div>
+                <input type="checkbox" id="toggle-custom" class="toggle">
+                <label for="toggle-custom" class="menu-label">カスタム機能</label>
+                <div class="submenu">
+                    <ul class="maker-none">
+                        <li class="menu-list"><button id="EmpInfo" data-controller="EmpInfo" data-action="Index" class="side_button">社員情報</button></li>
+                    </ul>
+                </div>
+            </div>
+        }
+        <div>
+            @RenderBody()
+        </div>
+    </div>
+    @if (ViewBag.Foot)
+    {
+        <footer class="foot">
+            @if (!string.IsNullOrEmpty(ViewBag.LButton))
+            {
+                <button class="button_negative btnBack w120">@ViewBag.LButton</button>
+            }
+            @if (!string.IsNullOrEmpty(ViewBag.RButton))
+            {
+                <button class="button_active w120">@ViewBag.RButton</button>
+            }
+        </footer>
+    }
+</body>
+</html>

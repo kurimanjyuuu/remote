@@ -1,0 +1,853 @@
+﻿html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: #F0F0F0 !important;
+    font-family: "ヒラギノ角ゴ ProN","Hiragino Kaku Gothic ProN","メイリオ","Meiryo",sans-serif;
+    font-size: 16px;
+}
+
+header {
+    display: flex; /* ヘッダーをフレックスコンテナに設定 */
+    align-items: center; /* 要素を垂直方向の中央に配置 */
+    justify-content: space-between; /* 要素間のスペースを均等に分配 */
+    border-bottom: 1px solid #dee2e6;
+}
+
+.header-icon {
+    flex: 0 0 auto; /* アイコンのサイズは変更されない */
+}
+
+.header-title {
+    flex-grow: 1; /* タイトルが利用可能なスペースを埋める */
+    text-align: center; /* タイトルを中央に配置 */
+    font-size: 35px; /* タイトルのフォントサイズを大きく設定 */
+}
+
+footer.foot {
+    border-top: 1px solid #dee2e6;
+    width: 100%;
+    height: 55px;
+    display: flex;
+    justify-content: space-between; /* ボタンを左右に配置 */
+}
+
+ul.maker-none {
+    list-style-type: none; /* マーカーを非表示にする */
+    padding-left: 0; /* 左のパディングを取り除く */
+    margin-left: 0; /* 左のマージンを取り除く */
+}
+
+img.logo_head {
+    height: 50px;
+}
+
+img.logo_home {
+    width: 500px;
+}
+
+img.usericon {
+    float: right;
+    height: 47px;
+    margin-right: 10px;
+}
+
+.errormsg {
+    font: bold;
+    color: #FF0000;
+    text-align: center;
+}
+
+/*gridDataサムネイル幅*/
+.w60 {
+    width: 60px;
+}
+
+.w70 {
+    width: 70px;
+}
+
+/*半角～4文字*/
+.w90 {
+    width: 90px;
+}
+
+/*ボタンの最小幅*/
+.w100 {
+    width: 100px;
+}
+
+/*ボタンの最小幅*/
+.w103 {
+    width: 103px;
+}
+
+.w110 {
+    width: 110px;
+}
+
+/*半角～6文字*/
+.w120 {
+    width: 120px;
+}
+
+.w130 {
+    width: 130px;
+}
+
+.w140 {
+    width: 140px;
+}
+
+/*半角～12文字*/
+.w150 {
+    width: 150px;
+}
+
+/*半角～12文字*/
+.w160 {
+    width: 160px;
+}
+
+/**/
+.w190 {
+    width: 190px;
+}
+
+.w210 {
+    width: 210px;
+}
+
+.w230 {
+    width: 230px;
+}
+
+/*半角～20文字*/
+.w240 {
+    width: 240px;
+}
+
+.w280 {
+    width: 280px;
+}
+
+/*半角～20文字*/
+.w300 {
+    width: 300px;
+}
+
+.w315 {
+    width: 315px;
+}
+
+/*半角～30文字*/
+.w330 {
+    width: 330px;
+}
+
+/*画面最大想定*/
+.w900 {
+    width: 900px;
+}
+.w950 {
+    width: 950px;
+}
+
+.w95per {
+    width: 99%;
+}
+
+.imgPreview {
+    width: 210px;
+    height: 297px;
+}
+
+/*yyyy/mm/dd カレンダーコントロール*/
+.w_calendar {
+    width: 130px;
+}
+
+button.button_active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    position: relative;
+    background: #228bc8;
+    border: 1px solid #228bc8;
+    box-sizing: border-box;
+    padding: 0 25px 0 40px;
+    color: #fff;
+    font-size: 16px;
+    letter-spacing: 0.1em;
+    line-height: 1.3;
+    text-align: left;
+    text-decoration: none;
+    transition-duration: 0.3s;
+}
+
+    button.button_active:before {
+        content: '';
+        width: 8px;
+        height: 8px;
+        border: 0;
+        border-top: 2px solid #fff;
+        border-right: 2px solid #fff;
+        transform: rotate(45deg);
+        position: absolute;
+        top: 50%;
+        left: 25px;
+        margin-top: -6px;
+    }
+
+    button.button_active:hover {
+        background: #fff;
+        color: #228bc8;
+    }
+
+        button.button_active:hover:before {
+            border-top: 2px solid #228bc8;
+            border-right: 2px solid #228bc8;
+        }
+
+button.button_negative {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    position: relative;
+    background: #808080;
+    border: 1px solid #808080;
+    box-sizing: border-box;
+    padding: 0 25px 0 40px;
+    color: #fff;
+    font-size: 16px;
+    letter-spacing: 0.1em;
+    line-height: 1.3;
+    text-align: left;
+    text-decoration: none;
+    transition-duration: 0.3s;
+}
+
+    button.button_negative:before {
+        content: '';
+        width: 8px;
+        height: 8px;
+        border: 0;
+        border-top: 2px solid #fff;
+        border-right: 2px solid #fff;
+        transform: rotate(45deg);
+        position: absolute;
+        top: 50%;
+        left: 25px;
+        margin-top: -6px;
+    }
+
+    button.button_negative:hover {
+        background: #fff;
+        color: #808080;
+    }
+
+        button.button_negative:hover:before {
+            border-top: 2px solid #808080;
+            border-right: 2px solid #808080;
+        }
+
+button.btnSearch {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    position: relative;
+    background: #EDB918;
+    border: 1px solid #EDB918;
+    box-sizing: border-box;
+    padding: 0 25px 0 40px;
+    color: #fff;
+    font-size: 16px;
+    letter-spacing: 0.1em;
+    line-height: 1.3;
+    text-align: left;
+    text-decoration: none;
+    transition-duration: 0.3s;
+}
+
+    button.btnSearch:before {
+        content: '';
+        width: 8px;
+        height: 8px;
+        border: 0;
+        border-top: 2px solid #fff;
+        border-right: 2px solid #fff;
+        transform: rotate(45deg);
+        position: absolute;
+        top: 50%;
+        left: 25px;
+        margin-top: -6px;
+    }
+
+    button.btnSearch:hover {
+        background: #fff;
+        color: #EDB918;
+    }
+
+        button.btnSearch:hover:before {
+            border-top: 2px solid #EDB918;
+            border-right: 2px solid #EDB918;
+        }
+
+button.button_reset {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    position: relative;
+    background: #ff7b7b;
+    border: 1px solid #ff7b7b;
+    box-sizing: border-box;
+    padding: 0 25px 0 40px;
+    color: #fff;
+    font-size: 16px;
+    letter-spacing: 0.1em;
+    line-height: 1.3;
+    text-align: left;
+    text-decoration: none;
+    transition-duration: 0.3s;
+}
+
+    button.button_reset:before {
+        content: '';
+        width: 8px;
+        height: 8px;
+        border: 0;
+        border-top: 2px solid #fff;
+        border-right: 2px solid #fff;
+        transform: rotate(45deg);
+        position: absolute;
+        top: 50%;
+        left: 25px;
+        margin-top: -6px;
+    }
+
+    button.button_reset:hover {
+        background: #fff;
+        color: #ff7b7b;
+    }
+
+        button.button_reset:hover:before {
+            border-top: 2px solid #ff7b7b;
+            border-right: 2px solid #ff7b7b;
+        }
+
+button.side_button {
+    display: flex;
+    align-items: center;
+    height: 40px;
+    position: relative;
+    background-color: #dcdcdc;
+    border: 1px solid #dcdcdc;
+    box-sizing: border-box;
+    color: black;
+    font-size: 16px;
+    letter-spacing: 0.1em;
+    line-height: 1.3;
+    text-align: left;
+    text-decoration: none;
+    transition-duration: 0.3s;
+    width: 197px;
+}
+
+    button.side_button:before {
+        width: 8px;
+        height: 8px;
+        border: 0;
+        border-top: 2px solid #fff;
+        border-right: 2px solid #fff;
+        transform: rotate(45deg);
+        position: absolute;
+        top: 50%;
+        left: 25px;
+        margin-top: -6px;
+    }
+
+    button.side_button:hover {
+        background: #fff;
+        color: #228bc8;
+    }
+
+        button.side_button:hover:before {
+            border-top: 2px solid #228bc8;
+            border-right: 2px solid #228bc8;
+        }
+
+.btnActive {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    position: relative;
+    background: #EDB918;
+    border: 1px solid #EDB918;
+    box-sizing: border-box;
+    padding: 0 25px 0 40px;
+    color: #fff;
+    font-size: 16px;
+    letter-spacing: 0.1em;
+    line-height: 1.3;
+    text-align: left;
+    text-decoration: none;
+    transition-duration: 0.3s;
+}
+btnSearch {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    position: relative;
+    background: #EDB918;
+    border: 1px solid #EDB918;
+    box-sizing: border-box;
+    padding: 0 25px 0 40px;
+    color: #fff;
+    font-size: 16px;
+    letter-spacing: 0.1em;
+    line-height: 1.3;
+    text-align: left;
+    text-decoration: none;
+    transition-duration: 0.3s;
+}
+btnDelete {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    position: relative;
+    background: #EDB918;
+    border: 1px solid #EDB918;
+    box-sizing: border-box;
+    padding: 0 25px 0 40px;
+    color: #fff;
+    font-size: 16px;
+    letter-spacing: 0.1em;
+    line-height: 1.3;
+    text-align: left;
+    text-decoration: none;
+    transition-duration: 0.3s;
+}
+
+/* input-groupを横並びにするためにflexboxを使います */
+.rowContents {
+    display: flex;
+    height: 100%;
+    align-items: center;
+}
+
+input.textbox {
+    height: 35px;       
+    padding: 10px 15px; /*ボックスを大きくする*/
+    font-size: 1rem;
+    border-radius: 3px; /*ボックス角の丸み*/
+    border: 1px solid #ddd; /*枠線*/
+    box-sizing: border-box; /*横幅の解釈をpadding, borderまでとする*/
+}
+
+    input.textbox:focus {
+        box-shadow: 0 0 2px 0 rgba(255,153,0,1);
+        border: 2px solid #FFF !important;
+        outline: 0;
+    }
+
+input[type="text"], input[type="password"] {
+    background-color: #e0f7fa; /* 薄い水色の背景色を指定 */
+    box-shadow: 0 1px 2px rgba(0,0,0, .4) inset;
+}
+
+textarea {
+    background-color: #e0f7fa; /* 薄い水色の背景色を指定 */
+    resize: none;
+    box-shadow: 0 1px 2px rgba(0,0,0, .4) inset;
+}
+
+/*チェックボックス関連*/
+.CheckBoxLabel {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    width: 120px;
+}
+
+.CheckBoxEdit {
+    margin: 0;
+    width: 0;
+    opacity: 0;
+}
+
+.CheckBoxLabel:hover > .CheckDummy {
+    background: #CCCCCC;
+}
+
+.CheckBoxEdit:focus + .CheckDummy {
+    background: #CCCCCC;
+}
+
+.CheckBoxEdit:checked + .CheckDummy {
+    background: #555555;
+}
+
+    .CheckBoxEdit:checked + .CheckDummy::before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 35%;
+        height: 2px;
+        transform: translate(-5px, 6px) rotateZ(-135deg);
+        transform-origin: 1px 1px;
+        background: #FFFFFF;
+    }
+
+    .CheckBoxEdit:checked + .CheckDummy::after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 70%;
+        height: 2px;
+        transform: translate(-5px, 6px) rotateZ(-45deg);
+        transform-origin: 1px 1px;
+        background: #FFFFFF;
+    }
+
+.CheckDummy {
+    position: relative;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 30px;
+    height: 30px;
+    background: #F5F5F5;
+    box-shadow: 0 1px 4px rgba(0,0,0, .4) inset;
+}
+
+.CheckBoxLabelText {
+    margin-left: 5px;
+    display: block;
+    font-weight: bold;
+}
+
+.mainContents {
+    width: 100%;
+    flex: 1; /* フレックスアイテムとして残りのスペースをすべて使用する */
+    display: flex;
+}
+
+.side {
+    background-color: #dcdcdc;
+    width: 170px;
+    text-align: center;
+}
+
+.loginUser {
+    text-align: right;
+    margin-right: 60px;
+}
+
+.usermenu {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+}
+
+.usericon {
+    cursor: pointer;
+    display: block;
+    height: 50px;
+}
+
+.userlist {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 100%;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    z-index: 1;
+    width: 45px;
+}
+
+    .userlist a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }
+
+        .userlist a:hover {
+            background-color: #f1f1f1;
+        }
+
+.flex-menu {
+    display: flex; /* Flexbox コンテナを設定 */
+    flex-direction: column; /* 子要素を縦方向に配置 */
+    max-height: calc(100vh - 100px);
+    background-color: #dcdcdc;
+    width: 210px;
+    overflow: auto;
+}
+
+/* チェックボックスを非表示に */
+.toggle {
+    display: none;
+}
+
+/* プルダウンメニューのボタンスタイル */
+.menu-label {
+    display: block;
+    background-color: #f7f7f7;
+    padding: 10px;
+    border: 1px solid #ddd;
+    cursor: pointer;
+    margin-top: 5px;
+}
+
+/* サブメニューの初期表示を非表示に */
+.submenu {
+    display: none;
+    padding: 10px;
+    border-left: 3px solid #ddd;
+}
+
+/* チェックボックスがチェックされている時のサブメニューの表示 */
+.toggle:checked + .menu-label + .submenu {
+    display: block;
+}
+
+/* チェックされている時のメニューラベルのスタイル */
+.toggle:checked + .menu-label::after {
+    content: "－";
+    float: right;
+}
+
+/* チェックされていない時のメニューラベルのスタイル */
+.toggle:not(:checked) + .menu-label::after {
+    content: "＋";
+    float: right;
+}
+
+/* サブメニュー内の各項目を縦に並べる */
+.submenu div {
+    margin-bottom: 5px;
+}
+
+/* inputをラベルのように使用*/
+.labeltext {
+    background-color: transparent;
+    border-color: transparent;
+}
+
+/*メインコンテンツ領域*/
+.startform {
+    margin-left: 5px;
+    margin-top: 5px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
+
+/*画面構成*/
+.maincontents-layout {
+    display: flex; /* Flexbox コンテナを設定 */
+    flex-direction: column; /* 子要素を縦方向に配置 */
+    width: calc(100vw - 225px);
+    max-width: calc(100vw - 225px);
+    height: calc(100vh - 110px);
+    max-height: calc(100vh - 110px);
+}
+
+/*selectボックス*/
+select {
+    /* ブラウザのデフォルトのスタイルをクリアする */
+    outline: 0;
+    /* 以下スタイルづけ */
+    border: 2px solid #e0f7fa;
+    background-color: #e0f7fa;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    padding: 5px 10px;
+    height: 35px;
+    box-shadow: 0 1px 4px rgba(0,0,0, .4) inset;
+}
+
+    select:disabled {
+        background-color: #CCCCCC;
+    }
+/* 以下、親要素に設定
+・サイズの指定
+・擬似要素の指定 */
+.wrapper {
+    height: 60px;
+    position: relative;
+}
+    /* 擬似要素で矢印をつける */
+    .wrapper::before {
+        content: "";
+        border-top: 12px solid #ff2e63;
+        border-right: 8px solid transparent;
+        border-left: 8px solid transparent;
+        position: absolute;
+        right: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+tr:focus td {
+    background-color: #feff9e; /* 薄い水色の背景色を指定 */
+}
+
+.hidden {
+    display: none !important;
+}
+
+/*タブ切替*/
+.tab-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 5px 0;
+}
+
+    .tab-wrap:after {
+        content: '';
+        width: 100%;
+        height: 3px;
+        background: DeepSkyBlue;
+        display: block;
+        order: -1;
+    }
+
+.tab-label {
+    color: White;
+    background: LightGray;
+    font-weight: bold;
+    text-shadow: 0 -1px 0 rgba(0,0,0,.2);
+    white-space: nowrap;
+    text-align: center;
+    padding: 10px .5em;
+    order: -1;
+    position: relative;
+    z-index: 1;
+    cursor: pointer;
+    border-radius: 5px 5px 0 0;
+    flex: 1;
+}
+
+    .tab-label:not(:last-of-type) {
+        margin-right: 5px;
+    }
+
+.tab-content {
+    width: 100%;
+    height: 0px;
+    overflow: hidden;
+    opacity: 0;
+}
+/* アクティブなタブ */
+.tab-switch:checked + .tab-label {
+    background: DeepSkyBlue;
+}
+
+    .tab-switch:checked + .tab-label + .tab-content {
+        height : calc(100vh - 165px);
+        overflow: auto;
+        padding: 15px;
+        opacity: 1;
+        transition: .5s opacity;
+        box-shadow: 0 0 3px rgba(0,0,0,.2);
+    }
+/* ラジオボタン非表示 */
+.tab-switch {
+    display: none;
+}
+
+.DataGrid {
+    width: calc(100vw - 225px);
+    text-align:center;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+    .DataGrid th {
+        background: #DCC6C9;
+        border: solid 1px #C1B7B8;
+        color: #000000;
+        height: 5vh;
+    }
+
+    .DataGrid td {
+        border: solid 1px #C1B7B8;
+        background: #e9faf9;
+    }
+
+.tableCommon {
+    margin-left: 5px;
+    margin-top: 3px;
+    border: solid 1px #C1B7B8;
+    width: 99%;
+}
+
+.tableEmpInfo {
+    margin-left: 5px;
+    margin-top: 280px;
+    border: solid 1px #C1B7B8;
+    width: 99%;
+}
+
+.tdLabel {
+    background: #DCC6C9;
+    border: solid 1px #C1B7B8;
+    text-align: right;
+}
+.tdItem {
+    border: solid 1px #C1B7B8;
+}
+.gridRight {
+    text-align: right;
+}
+.gridLeft {
+    text-align: left;
+}
+.required {
+    color: red;
+    font-weight: bold;
+}
+
+.trFixHeight{
+    height:40px;
+}
+
+/*検索条件条件帯*/
+.lblRegion {
+    padding: 0.5rem 1rem;
+    background-color: rgba(0, 0, 0, 0.03);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+    box-sizing: border-box; /* パディングとボーダーを幅に含める */
+    overflow-x: hidden; /* 横スクロールを隠す */
+    width: calc(100vw - 225px);
+    max-width: calc(100vw - 225px);
+}
+
+/*検索条件*/
+.divRegion {
+    display: flex; /* Flexboxレイアウトを有効化 */
+    justify-content: space-between; /* アイテム間に均等なスペースを配置 */
+    align-items: center; /* 垂直方向の中央揃え */
+    max-height: 90px;
+    margin-top: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding-bottom: 10px;
+}

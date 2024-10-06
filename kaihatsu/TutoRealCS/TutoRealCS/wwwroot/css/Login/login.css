@@ -1,0 +1,104 @@
+﻿.flexbox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100vw;
+    height: 99vh; /* コンテナの高さをビューポートの高さに合わせる */
+    margin: 0; /* デフォルトのマージンを取り除く */
+    padding: 0; /* デフォルトのパディングを取り除く */
+    border: 0; /* 枠線を消す */
+    box-sizing: border-box; /* パディングとボーダーを要素の幅と高さに含める */
+}
+
+button {
+    margin-top: 40px; /* 画像の下の余白を増やす */
+}
+
+    button.button_guest {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 40px;
+        position: relative;
+        background: #0b472b;
+        border: 1px solid #0b472b;
+        box-sizing: border-box;
+        padding: 0 25px 0 40px;
+        color: #fff;
+        font-size: 16px;
+        letter-spacing: 0.1em;
+        line-height: 1.3;
+        text-align: left;
+        text-decoration: none;
+        transition-duration: 0.3s;
+    }
+
+        button.button_guest:before {
+            content: '';
+            width: 8px;
+            height: 8px;
+            border: 0;
+            border-top: 2px solid #fff;
+            border-right: 2px solid #fff;
+            transform: rotate(45deg);
+            position: absolute;
+            top: 50%;
+            left: 25px;
+            margin-top: -6px;
+        }
+
+        button.button_guest:hover {
+            background: #fff;
+            color: #228bc8;
+        }
+
+            button.button_guest:hover:before {
+                border-top: 2px solid #228bc8;
+                border-right: 2px solid #228bc8;
+            }
+
+
+    button.button_skill {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 40px;
+        position: relative;
+        background: #0b472b;
+        border: 1px solid #0b472b;
+        box-sizing: border-box;
+        padding: 0 25px 0 40px;
+        color: #fff;
+        font-size: 16px;
+        letter-spacing: 0.1em;
+        line-height: 1.3;
+        text-align: left;
+        text-decoration: none;
+        transition-duration: 0.3s;
+    }
+
+        button.button_skill:before {
+            content: '';
+            width: 8px;
+            height: 8px;
+            border: 0;
+            border-top: 2px solid #fff;
+            border-right: 2px solid #fff;
+            transform: rotate(45deg);
+            position: absolute;
+            top: 50%;
+            left: 25px;
+            margin-top: -6px;
+        }
+
+        button.button_skill:hover {
+            background: #fff;
+            color: #228bc8;
+        }
+
+            button.button_skill:hover:before {
+                border-top: 2px solid #228bc8;
+                border-right: 2px solid #228bc8;
+            }

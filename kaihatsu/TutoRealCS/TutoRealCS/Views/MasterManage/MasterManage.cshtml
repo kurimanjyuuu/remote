@@ -1,0 +1,57 @@
+﻿@* ViewModelを指定する *@
+@model StandByListViewModel
+@{
+    ViewData["Title"] = "マスター管理";
+}
+
+@section Styles {
+    <link rel="stylesheet" href="~/css/StandBy/standbyList.css" asp-append-version="true" />
+}
+
+@section Scripts {
+    <script src="~/js/StandBy/standbylist.js"></script>
+}
+
+<form class="card startform" asp-controller="StandBy" asp-action="Search" method="POST">
+    @* 画面全体 *@
+    <div class="maincontents-layout">
+        <div class="tab-wrap">
+            <input id="Tab-Emp" type="radio" name="TAB" class="tab-switch" checked="checked" /><label class="tab-label" for="Tab-Emp">待機エンジニアマスター</label>
+            <div class="tab-content">
+                @* ヘッダー *@
+                <div class="table_head">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th class="w120">社員番号</th>
+                                <th>社員名称</th>
+                                <th>社員カナ名称</th>
+                                <th >所属</th>
+                                <th>メールアドレス</th>
+                            </tr>
+                        </thead>
+                    </table>
+                </div>
+                @* 明細 *@
+                <div class="data_grid">
+                </div>
+            </div>
+            <input id="Tab-Clean" type="radio" name="TAB" class="tab-switch" /><label class="tab-label" for="Tab-Clean">掃除場所マスター</label>
+            <div class="tab-content">
+                掃除場所マスター
+            </div>
+            <input id="Tab-Dept" type="radio" name="TAB" class="tab-switch" /><label class="tab-label" for="Tab-Dept">部課マスター</label>
+            <div class="tab-content">
+                部課マスター
+            </div>
+            <input id="Tab-Category" type="radio" name="TAB" class="tab-switch" /><label class="tab-label" for="Tab-Category">カテゴリーマスター</label>
+            <div class="tab-content">
+                カテゴリーマスター
+            </div>
+            <input id="Tab-Depository" type="radio" name="TAB" class="tab-switch" /><label class="tab-label" for="Tab-Depository">拠点マスター</label>
+            <div class="tab-content">
+                拠点マスター
+            </div>
+        </div>
+    </div>
+</form>

@@ -1,0 +1,67 @@
+is_global = true
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = TutoRealCS
+build_property.RootNamespace = TutoRealCS
+build_property.ProjectDir = C:\Users\seraku\Desktop\seraku_kensyu\TutoRealCS\TutoRealCS\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 8.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\seraku\Desktop\seraku_kensyu\TutoRealCS\TutoRealCS
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/seraku/Desktop/seraku_kensyu/TutoRealCS/TutoRealCS/Views/Book/BookList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9va1xCb29rTGlzdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/seraku/Desktop/seraku_kensyu/TutoRealCS/TutoRealCS/Views/Book/BookRegist.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9va1xCb29rUmVnaXN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/seraku/Desktop/seraku_kensyu/TutoRealCS/TutoRealCS/Views/Login/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cTG9naW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/seraku/Desktop/seraku_kensyu/TutoRealCS/TutoRealCS/Views/Main/Main.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFpblxNYWluLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/seraku/Desktop/seraku_kensyu/TutoRealCS/TutoRealCS/Views/Main/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFpblxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/seraku/Desktop/seraku_kensyu/TutoRealCS/TutoRealCS/Views/MasterManage/MasterManage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFzdGVyTWFuYWdlXE1hc3Rlck1hbmFnZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/seraku/Desktop/seraku_kensyu/TutoRealCS/TutoRealCS/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/seraku/Desktop/seraku_kensyu/TutoRealCS/TutoRealCS/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/seraku/Desktop/seraku_kensyu/TutoRealCS/TutoRealCS/Views/StandBy/StandByList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3RhbmRCeVxTdGFuZEJ5TGlzdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/seraku/Desktop/seraku_kensyu/TutoRealCS/TutoRealCS/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/seraku/Desktop/seraku_kensyu/TutoRealCS/TutoRealCS/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/seraku/Desktop/seraku_kensyu/TutoRealCS/TutoRealCS/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-kucmtmtqa8

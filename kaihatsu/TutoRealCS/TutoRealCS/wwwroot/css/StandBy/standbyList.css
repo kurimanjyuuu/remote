@@ -1,0 +1,23 @@
+﻿/*テーブルヘッダー*/
+.table_head {
+    width: calc(100vw - 225px);
+    max-width: calc(100vw - 225px);
+    height: 40px;
+    max-height: 40px;
+}
+
+/*テーブルデータ表示*/
+.data_grid {
+    display: block;
+    width: calc(100vw - 225px);
+    max-width: calc(100vw - 225px);
+    height: calc(100vh - 110px);
+    max-height: calc(100vh - 110px);
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.btnSearch {
+    margin-left: auto;
+    display: block;
+}

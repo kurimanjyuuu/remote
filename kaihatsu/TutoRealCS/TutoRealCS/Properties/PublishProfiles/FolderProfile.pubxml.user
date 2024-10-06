@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+https://go.microsoft.com/fwlink/?LinkID=208121.
+-->
+<Project>
+  <PropertyGroup>
+    <_PublishTargetUrl>D:\TutoRealProject\release</_PublishTargetUrl>
+    <History>True|2024-08-29T05:45:27.9859826Z||;True|2024-08-29T14:44:20.6268499+09:00||;False|2024-07-22T14:20:00.4869209+09:00||;False|2024-07-22T14:16:48.0763790+09:00||;True|2024-07-22T11:09:30.0082874+09:00||;False|2024-07-22T11:07:43.9230928+09:00||;True|2024-07-19T18:59:47.4166774+09:00||;True|2024-07-19T12:52:20.9881179+09:00||;</History>
+    <LastFailureDetails />
+  </PropertyGroup>
+</Project>

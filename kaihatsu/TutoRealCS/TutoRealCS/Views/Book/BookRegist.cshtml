@@ -1,0 +1,85 @@
+﻿@* ViewModelを指定する *@
+@model BookRegistViewModel
+@{
+    ViewData["Title"] = @Model.title;
+}
+@section Styles {
+    <link rel="stylesheet" href="~/css/Book/bookregist.css" asp-append-version="true" />
+}
+
+@section Scripts {
+    <script src="~/js/Book/bookregist.js"></script>
+}
+
+<form id="trForm" class="card startform" asp-controller="Book" asp-action="Regist" method="POST" enctype="multipart/form-data">
+    @* 検索条件 *@
+    <div class="maincontents-layout">
+        <input type="hidden" asp-for="@Model.ID" />
+        <table class="tableCommon">
+            <tr class="trFixHeight">
+                <td class="tdLabel">書籍名称：</td>
+                <td class="tdItem" colspan="2">
+                    <input type="text" class="textbox w95per" asp-for="@Model.Name" />
+                </td>
+            </tr>
+            <tr class="trFixHeight">
+                <td class="tdLabel">カテゴリ：</td>
+                <td class="tdItem" colspan="2">
+                    <div class="rowContents">
+                        @foreach (var item in Model.CategoryList)
+                        {
+                            <label class="CheckBoxLabel">
+                                <input type="hidden" asp-for="@item.Bitvalue" />
+                                <input class="CheckBoxEdit CategoryCheck" type="checkbox" asp-for="@item.CheckStatus">
+                                <span class="CheckDummy"></span>
+                                <span class="CheckBoxLabelText">@item.Name</span>
+                            </label>
+                        }
+                        <input type="hidden" asp-for="@Model.SelectCategory" />
+                    </div>
+                </td>
+            </tr>
+            <tr class="trFixHeight">
+                <td class="tdLabel">保管場所：</td>
+                <td class="tdItem" colspan="2">
+                    <div class="rowContents">
+                        <select class="dropdown ddlDepository" asp-for="@Model.SelectDepository" asp-items="@Model.DepositoryList">
+                            <option value="0"></option>
+                        </select>
+                        <label class="CheckBoxLabel">
+                            <input class="CheckBoxEdit RossFlg" type="checkbox" asp-for="@Model.RossFlg">
+                            <span class="CheckDummy"></span>
+                            <span class="CheckBoxLabelText">所在不明</span>
+                        </label>
+                        <label class="CheckBoxLabel">
+                            <input class="CheckBoxEdit DelFlg" type="checkbox" asp-for="@Model.DelFlg">
+                            <span class="CheckDummy"></span>
+                            <span class="CheckBoxLabelText">廃棄</span>
+                        </label>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="tdLabel">備考：</td>
+                <td class="tdItem">
+                    <textarea class="remarks" asp-for="@Model.Remarks"></textarea>
+                </td>
+                <td class="tdItem">
+                    <!-- ファイルを選択するための input 要素（非表示） -->
+                    <input type="file" id="fileInput" accept="image/*" asp-for="@Model.ImageFile" />
+                    <!-- ファイル選択画面を表示させるための div 要素 -->
+                    <input type="text" hidden="hidden" class="LoadFilePath" asp-for="@Model.LoadFilePath" />
+                    @if (!string.IsNullOrWhiteSpace(@Model.LoadFilePath))
+                    {
+                        <img id="thumbnail" class="thumb" src="~/img/Book/@Model.LoadFilePath" asp-append-version="true" />
+                    }
+                    else
+                    {
+                        <img id="thumbnail" class="thumb" asp-append-version="true" />
+                    }
+                </td>
+            </tr>
+        </table>
+
+    </div>
+</form>
