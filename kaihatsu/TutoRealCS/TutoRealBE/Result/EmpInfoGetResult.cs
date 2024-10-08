@@ -19,28 +19,21 @@ namespace TutoRealBE.Context
         // デシリアライズ処理を実装
         public override void Deserialize(string serializedData)
         {
-            var obj = JsonSerializer.Deserialize<EmpInfoGetResult>(serializedData);
-            if (obj != null)
-            {
-                EmpId7 = obj.EmpId7;
-                DeptCode4 = obj.DeptCode4;
-                SeiKanji = obj.SeiKanji;
-                MeiKanji = obj.MeiKanji;
-                SeiKana = obj.SeiKana;
-                MeiKana = obj.MeiKana;
-                MailAddress = obj.MailAddress;
-            }
+            //AuthorityResult obj = JsonSerializer.Deserialize<AuthorityResult>(serializedData);
+            //if (obj != null)
+            //{
+            //}
         }
 
         /// <summary>
         /// 社員番号
         /// </summary>
-        public string EmpId7 { get; set; } = string.Empty; // char
+        public string EmpId7 { get; set; } = string.Empty;
 
         /// <summary>
         /// 部署コード
         /// </summary>
-        public string DeptCode4 { get; set; } = string.Empty; // nchar
+        public string DeptCode4 { get; set; } = string.Empty;
 
         /// <summary>
         /// 姓

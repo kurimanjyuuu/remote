@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "js4yLHMkqazKXXmckl0UTZtu9ZUNARq3hDgSwVOur5s=",
+  "Hash": "gZjNFKwUUaJbxA5oWqkpIna6AuLvMf/jK7g6ZcwcfS8=",
   "Source": "TutoRealCS",
   "BasePath": "_content/TutoRealCS",
   "Mode": "Default",
@@ -378,12 +378,12 @@
       "OriginalItemSpec": "wwwroot\\js\\const.js"
     },
     {
-      "Identity": "C:\\Users\\yuna\\OneDrive\\Desktop\\works\\kaihatsu\\TutoRealCS\\TutoRealCS\\wwwroot\\js\\EmpInfo\\EmpInfoRegist.js",
+      "Identity": "C:\\Users\\yuna\\OneDrive\\Desktop\\works\\kaihatsu\\TutoRealCS\\TutoRealCS\\wwwroot\\js\\EmpInfo\\Emp.js",
       "SourceId": "TutoRealCS",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\yuna\\OneDrive\\Desktop\\works\\kaihatsu\\TutoRealCS\\TutoRealCS\\wwwroot\\",
       "BasePath": "_content/TutoRealCS",
-      "RelativePath": "js/EmpInfo/EmpInfoRegist.js",
+      "RelativePath": "js/EmpInfo/Emp.js",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -394,7 +394,26 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\js\\EmpInfo\\EmpInfoRegist.js"
+      "OriginalItemSpec": "wwwroot\\js\\EmpInfo\\Emp.js"
+    },
+    {
+      "Identity": "C:\\Users\\yuna\\OneDrive\\Desktop\\works\\kaihatsu\\TutoRealCS\\TutoRealCS\\wwwroot\\js\\EmpInfo\\EmpInfoSearch.js",
+      "SourceId": "TutoRealCS",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\yuna\\OneDrive\\Desktop\\works\\kaihatsu\\TutoRealCS\\TutoRealCS\\wwwroot\\",
+      "BasePath": "_content/TutoRealCS",
+      "RelativePath": "js/EmpInfo/EmpInfoSearch.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\EmpInfo\\EmpInfoSearch.js"
     },
     {
       "Identity": "C:\\Users\\yuna\\OneDrive\\Desktop\\works\\kaihatsu\\TutoRealCS\\TutoRealCS\\wwwroot\\js\\Login\\login.js",

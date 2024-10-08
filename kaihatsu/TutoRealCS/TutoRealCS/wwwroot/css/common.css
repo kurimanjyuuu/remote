@@ -402,7 +402,7 @@ button.side_button {
     text-decoration: none;
     transition-duration: 0.3s;
 }
-btnSearch {
+.btnSearch {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -420,7 +420,7 @@ btnSearch {
     text-decoration: none;
     transition-duration: 0.3s;
 }
-btnDelete {
+.btnDelete {
     display: flex;
     justify-content: center;
     align-items: center;

@@ -7,7 +7,6 @@ using TutoRealBL.Master;
 using Microsoft.AspNetCore.Http;
 using TutoRealBE.Result;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 
 namespace TutoRealBL
 {
@@ -57,7 +56,6 @@ namespace TutoRealBL
                 BookConditionContext cond => await new BookBL(_dbContext, _configuration).SelectAsync(cond),
                 BaseContext parent => await new MasterBL(_dbContext, _configuration).SelectAsync(parent),
                 BookGetContext parent => await new BookBL(_dbContext, _configuration).GetAsync(parent),
-                EmpInfoGetContext parent => await new EmpBL(_dbContext, _configuration).GetAsync(parent),
                 _ => throw new ArgumentException("未対応のコンテキストです。", nameof(context))
             };
         }
@@ -66,6 +64,7 @@ namespace TutoRealBL
             return context switch
             {
                 BookRegistContext bookregist => await new BookBL(_dbContext, _configuration).InsertAsync(bookregist),
+                EmpInfoGetContext empregist => await new EmpBL(_dbContext, _configuration).InsertAsync(empregist),
                 _ => throw new ArgumentException("未対応のコンテキストです。", nameof(context))
             };
         }
@@ -75,6 +74,7 @@ namespace TutoRealBL
             {
                 BookRegistContext bookregist => await new BookBL(_dbContext, _configuration).UpdateAsync(bookregist),
                 BookLendReturnContext lendreturn => await new BookBL(_dbContext, _configuration).LendReturnAsync(lendreturn),
+                // EmpInfoGetContext empregist => await new EmpBL(_dbContext, _configuration).UpdateAsync(empregist),
                 _ => throw new ArgumentException("未対応のコンテキストです。", nameof(context))
             };
         }

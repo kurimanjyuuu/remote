@@ -57,14 +57,13 @@ $(function () {
 
         try {
             showLoading();
-            // ファイル情報
-            var formData = new FormData();
-            var serializedData = $('#trForm').serialize();
+            const formData = new FormData();
+            const serializedData = $('#trForm').serialize();
             $.each(serializedData.split('&'), function () {
-                var pair = this.split('=');
+                const pair = this.split('=');
                 formData.append(decodeURIComponent(pair[0]), decodeURIComponent(pair[1]));
             });
-            
+
             //入力情報の登録
             // AJAXリクエストを開始
             $.ajax({
@@ -79,7 +78,7 @@ $(function () {
                         title: '登録処理が完了しました',
                         icon: 'success',
                         showCancelButton: true,
-                        confirmButtonText: 'もう一度登録',
+                        confirmButtonText: '続けて登録する',
                         cancelButtonText: 'トップページへ戻る',
                         allowOutsideClick: false,
                         allowEscapeKey: false,
@@ -110,9 +109,4 @@ $(function () {
     });
 });
 
-function getCheckedValues() {
-    var values = $('.CategoryCheck:checked').map(function () {
-        return this.value;
-    }).get();
-    return values;
-}
+});

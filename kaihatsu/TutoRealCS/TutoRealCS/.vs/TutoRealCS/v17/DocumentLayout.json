@@ -3,79 +3,71 @@
   "WorkspaceRootPath": "C:\\Users\\yuna\\OneDrive\\Desktop\\works\\kaihatsu\\TutoRealCS\\TutoRealCS\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{AB976BDB-62DA-4B33-9EE6-22FFBD3E83BD}|..\\TutoRealBL\\TutoRealBL.csproj|c:\\users\\yuna\\onedrive\\desktop\\works\\kaihatsu\\tutorealcs\\tutorealbl\\empinfo\\empbl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{20044596-0CA7-4BD0-8CA9-DD0B97E56280}|..\\TutoRealBE\\TutoRealBE.csproj|c:\\users\\yuna\\onedrive\\desktop\\works\\kaihatsu\\tutorealcs\\tutorealbe\\parentcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{20044596-0CA7-4BD0-8CA9-DD0B97E56280}|..\\TutoRealBE\\TutoRealBE.csproj|c:\\users\\yuna\\onedrive\\desktop\\works\\kaihatsu\\tutorealcs\\tutorealbe\\result\\empinfogetresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7F2D7BDF-10D3-481D-9BC5-C745C03CE59F}|..\\TutoRealDA\\TutoRealDA.csproj|c:\\users\\yuna\\onedrive\\desktop\\works\\kaihatsu\\tutorealcs\\tutorealda\\empinfo\\empda.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{20044596-0CA7-4BD0-8CA9-DD0B97E56280}|..\\TutoRealBE\\TutoRealBE.csproj|c:\\users\\yuna\\onedrive\\desktop\\works\\kaihatsu\\tutorealcs\\tutorealbe\\result\\booklistresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{20044596-0CA7-4BD0-8CA9-DD0B97E56280}|..\\TutoRealBE\\TutoRealBE.csproj|c:\\users\\yuna\\onedrive\\desktop\\works\\kaihatsu\\tutorealcs\\tutorealbe\\result\\bookgetresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AB976BDB-62DA-4B33-9EE6-22FFBD3E83BD}|..\\TutoRealBL\\TutoRealBL.csproj|c:\\users\\yuna\\onedrive\\desktop\\works\\kaihatsu\\tutorealcs\\tutorealbl\\book\\bookbl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3E73A591-2691-4F6F-9975-0697EE94E51D}|TutoRealCS.csproj|c:\\users\\yuna\\onedrive\\desktop\\works\\kaihatsu\\tutorealcs\\tutorealcs\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3E73A591-2691-4F6F-9975-0697EE94E51D}|TutoRealCS.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{20044596-0CA7-4BD0-8CA9-DD0B97E56280}|..\\TutoRealBE\\TutoRealBE.csproj|c:\\users\\yuna\\onedrive\\desktop\\works\\kaihatsu\\tutorealcs\\tutorealbe\\context\\empinfogetcontext .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7F2D7BDF-10D3-481D-9BC5-C745C03CE59F}|..\\TutoRealDA\\TutoRealDA.csproj|c:\\users\\yuna\\onedrive\\desktop\\works\\kaihatsu\\tutorealcs\\tutorealda\\book\\bookda.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{17E5C8D4-FF25-4A2E-8EA0-AA2B2080F1BB}|..\\TutoRealBF\\TutoRealBF.csproj|c:\\users\\yuna\\onedrive\\desktop\\works\\kaihatsu\\tutorealcs\\tutorealbf\\tutorealbasebf.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7F2D7BDF-10D3-481D-9BC5-C745C03CE59F}|..\\TutoRealDA\\TutoRealDA.csproj|c:\\users\\yuna\\onedrive\\desktop\\works\\kaihatsu\\tutorealcs\\tutorealda\\tutorealbaseda.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3E73A591-2691-4F6F-9975-0697EE94E51D}|TutoRealCS.csproj|c:\\users\\yuna\\onedrive\\desktop\\works\\kaihatsu\\tutorealcs\\tutorealcs\\controllers\\empinfocontroller .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3E73A591-2691-4F6F-9975-0697EE94E51D}|TutoRealCS.csproj|solutionrelative:controllers\\empinfocontroller .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{3E73A591-2691-4F6F-9975-0697EE94E51D}|TutoRealCS.csproj|c:\\users\\yuna\\onedrive\\desktop\\works\\kaihatsu\\tutorealcs\\tutorealcs\\views\\empinfo\\empinfo.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{3E73A591-2691-4F6F-9975-0697EE94E51D}|TutoRealCS.csproj|solutionrelative:views\\empinfo\\empinfo.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3E73A591-2691-4F6F-9975-0697EE94E51D}|TutoRealCS.csproj|c:\\users\\yuna\\onedrive\\desktop\\works\\kaihatsu\\tutorealcs\\tutorealcs\\wwwroot\\js\\empinfo\\empinforegist.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{3E73A591-2691-4F6F-9975-0697EE94E51D}|TutoRealCS.csproj|solutionrelative:wwwroot\\js\\empinfo\\empinforegist.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+      "AbsoluteMoniker": "D:0:0:{3E73A591-2691-4F6F-9975-0697EE94E51D}|TutoRealCS.csproj|c:\\users\\yuna\\onedrive\\desktop\\works\\kaihatsu\\tutorealcs\\tutorealcs\\wwwroot\\js\\empinfo\\emp.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{3E73A591-2691-4F6F-9975-0697EE94E51D}|TutoRealCS.csproj|solutionrelative:wwwroot\\js\\empinfo\\emp.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3E73A591-2691-4F6F-9975-0697EE94E51D}|TutoRealCS.csproj|c:\\users\\yuna\\onedrive\\desktop\\works\\kaihatsu\\tutorealcs\\tutorealcs\\controllers\\empinfocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3E73A591-2691-4F6F-9975-0697EE94E51D}|TutoRealCS.csproj|solutionrelative:controllers\\empinfocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3E73A591-2691-4F6F-9975-0697EE94E51D}|TutoRealCS.csproj|c:\\users\\yuna\\onedrive\\desktop\\works\\kaihatsu\\tutorealcs\\tutorealcs\\views\\book\\bookregist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{3E73A591-2691-4F6F-9975-0697EE94E51D}|TutoRealCS.csproj|solutionrelative:views\\book\\bookregist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3E73A591-2691-4F6F-9975-0697EE94E51D}|TutoRealCS.csproj|c:\\users\\yuna\\onedrive\\desktop\\works\\kaihatsu\\tutorealcs\\tutorealcs\\controllers\\bookcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3E73A591-2691-4F6F-9975-0697EE94E51D}|TutoRealCS.csproj|solutionrelative:controllers\\bookcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{20044596-0CA7-4BD0-8CA9-DD0B97E56280}|..\\TutoRealBE\\TutoRealBE.csproj|c:\\users\\yuna\\onedrive\\desktop\\works\\kaihatsu\\tutorealcs\\tutorealbe\\result\\empinfogetresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3E73A591-2691-4F6F-9975-0697EE94E51D}|TutoRealCS.csproj|c:\\users\\yuna\\onedrive\\desktop\\works\\kaihatsu\\tutorealcs\\tutorealcs\\wwwroot\\js\\common.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{3E73A591-2691-4F6F-9975-0697EE94E51D}|TutoRealCS.csproj|solutionrelative:wwwroot\\js\\common.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+      "AbsoluteMoniker": "D:0:0:{3E73A591-2691-4F6F-9975-0697EE94E51D}|TutoRealCS.csproj|c:\\users\\yuna\\onedrive\\desktop\\works\\kaihatsu\\tutorealcs\\tutorealcs\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3E73A591-2691-4F6F-9975-0697EE94E51D}|TutoRealCS.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3E73A591-2691-4F6F-9975-0697EE94E51D}|TutoRealCS.csproj|c:\\users\\yuna\\onedrive\\desktop\\works\\kaihatsu\\tutorealcs\\tutorealcs\\wwwroot\\js\\book\\bookregist.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{3E73A591-2691-4F6F-9975-0697EE94E51D}|TutoRealCS.csproj|solutionrelative:wwwroot\\js\\book\\bookregist.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+      "AbsoluteMoniker": "D:0:0:{7F2D7BDF-10D3-481D-9BC5-C745C03CE59F}|..\\TutoRealDA\\TutoRealDA.csproj|c:\\users\\yuna\\onedrive\\desktop\\works\\kaihatsu\\tutorealcs\\tutorealda\\book\\bookda.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3E73A591-2691-4F6F-9975-0697EE94E51D}|TutoRealCS.csproj|c:\\users\\yuna\\onedrive\\desktop\\works\\kaihatsu\\tutorealcs\\tutorealcs\\models\\empinfoviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3E73A591-2691-4F6F-9975-0697EE94E51D}|TutoRealCS.csproj|solutionrelative:models\\empinfoviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{20044596-0CA7-4BD0-8CA9-DD0B97E56280}|..\\TutoRealBE\\TutoRealBE.csproj|c:\\users\\yuna\\onedrive\\desktop\\works\\kaihatsu\\tutorealcs\\tutorealbe\\context\\empinfogetcontext .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{20044596-0CA7-4BD0-8CA9-DD0B97E56280}|..\\TutoRealBE\\TutoRealBE.csproj|c:\\users\\yuna\\onedrive\\desktop\\works\\kaihatsu\\tutorealcs\\tutorealbe\\result\\bookgetresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AB976BDB-62DA-4B33-9EE6-22FFBD3E83BD}|..\\TutoRealBL\\TutoRealBL.csproj|c:\\users\\yuna\\onedrive\\desktop\\works\\kaihatsu\\tutorealcs\\tutorealbl\\empinfo\\empbl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{20044596-0CA7-4BD0-8CA9-DD0B97E56280}|..\\TutoRealBE\\TutoRealBE.csproj|c:\\users\\yuna\\onedrive\\desktop\\works\\kaihatsu\\tutorealcs\\tutorealbe\\parentcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7F2D7BDF-10D3-481D-9BC5-C745C03CE59F}|..\\TutoRealDA\\TutoRealDA.csproj|c:\\users\\yuna\\onedrive\\desktop\\works\\kaihatsu\\tutorealcs\\tutorealda\\empinfo\\empda.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:2:0:{AB976BDB-62DA-4B33-9EE6-22FFBD3E83BD}|..\\TutoRealBL\\TutoRealBL.csproj|c:\\users\\yuna\\onedrive\\desktop\\works\\kaihatsu\\tutorealcs\\tutorealbl\\tutorealbasebl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{17E5C8D4-FF25-4A2E-8EA0-AA2B2080F1BB}|..\\TutoRealBF\\TutoRealBF.csproj|c:\\users\\yuna\\onedrive\\desktop\\works\\kaihatsu\\tutorealcs\\tutorealbf\\tutorealbasebf.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3E73A591-2691-4F6F-9975-0697EE94E51D}|TutoRealCS.csproj|c:\\users\\yuna\\onedrive\\desktop\\works\\kaihatsu\\tutorealcs\\tutorealcs\\views\\book\\booklist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3E73A591-2691-4F6F-9975-0697EE94E51D}|TutoRealCS.csproj|solutionrelative:views\\book\\booklist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:1:0:{AB976BDB-62DA-4B33-9EE6-22FFBD3E83BD}|..\\TutoRealBL\\TutoRealBL.csproj|c:\\users\\yuna\\onedrive\\desktop\\works\\kaihatsu\\tutorealcs\\tutorealbl\\tutorealbasebl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\yuna\\AppData\\Local\\SourceServer\\666ecf7f644a5ad808ec95c0e49eab54703a18299e1342557e9e2daa7fcbd384\\TutoRealCS\\TutoRealBL\\TutoRealBaseBL.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3E73A591-2691-4F6F-9975-0697EE94E51D}|TutoRealCS.csproj|c:\\users\\yuna\\onedrive\\desktop\\works\\kaihatsu\\tutorealcs\\tutorealcs\\models\\bookregistviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3E73A591-2691-4F6F-9975-0697EE94E51D}|TutoRealCS.csproj|solutionrelative:models\\bookregistviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\seraku\\Desktop\\works\\TutoRealCS\\TutoRealBE\\ParentContext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{20044596-0CA7-4BD0-8CA9-DD0B97E56280}|..\\TutoRealBE\\TutoRealBE.csproj|c:\\users\\yuna\\onedrive\\desktop\\works\\kaihatsu\\tutorealcs\\tutorealbe\\context\\bookconditioncontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AB976BDB-62DA-4B33-9EE6-22FFBD3E83BD}|..\\TutoRealBL\\TutoRealBL.csproj|c:\\users\\yuna\\onedrive\\desktop\\works\\kaihatsu\\tutorealcs\\tutorealbl\\tutorealbasebl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{20044596-0CA7-4BD0-8CA9-DD0B97E56280}|..\\TutoRealBE\\TutoRealBE.csproj|c:\\users\\yuna\\onedrive\\desktop\\works\\kaihatsu\\tutorealcs\\tutorealbe\\context\\bookgetcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
@@ -84,24 +76,19 @@
       "AbsoluteMoniker": "D:0:0:{20044596-0CA7-4BD0-8CA9-DD0B97E56280}|..\\TutoRealBE\\TutoRealBE.csproj|c:\\users\\yuna\\onedrive\\desktop\\works\\kaihatsu\\tutorealcs\\tutorealbe\\context\\booklendreturncontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{20044596-0CA7-4BD0-8CA9-DD0B97E56280}|..\\TutoRealBE\\TutoRealBE.csproj|c:\\users\\yuna\\onedrive\\desktop\\works\\kaihatsu\\tutorealcs\\tutorealbe\\context\\bookregistcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{20044596-0CA7-4BD0-8CA9-DD0B97E56280}|..\\TutoRealBE\\TutoRealBE.csproj|c:\\users\\yuna\\onedrive\\desktop\\works\\kaihatsu\\tutorealcs\\tutorealbe\\result\\booklistresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3E73A591-2691-4F6F-9975-0697EE94E51D}|TutoRealCS.csproj|c:\\users\\yuna\\onedrive\\desktop\\works\\kaihatsu\\tutorealcs\\tutorealcs\\views\\book\\booklist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{3E73A591-2691-4F6F-9975-0697EE94E51D}|TutoRealCS.csproj|solutionrelative:views\\book\\booklist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{AB976BDB-62DA-4B33-9EE6-22FFBD3E83BD}|..\\TutoRealBL\\TutoRealBL.csproj|c:\\users\\yuna\\onedrive\\desktop\\works\\kaihatsu\\tutorealcs\\tutorealbl\\book\\bookbl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{AB976BDB-62DA-4B33-9EE6-22FFBD3E83BD}|..\\TutoRealBL\\TutoRealBL.csproj|c:\\users\\yuna\\onedrive\\desktop\\works\\kaihatsu\\tutorealcs\\tutorealbl\\tutorealbl.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\yuna\\AppData\\Local\\SourceServer\\666ecf7f644a5ad808ec95c0e49eab54703a18299e1342557e9e2daa7fcbd384\\TutoRealCS\\TutoRealBL\\TutoRealBaseBL.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{AB976BDB-62DA-4B33-9EE6-22FFBD3E83BD}|..\\TutoRealBL\\TutoRealBL.csproj|c:\\users\\yuna\\onedrive\\desktop\\works\\kaihatsu\\tutorealcs\\tutorealbl\\itutorealbasebl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3E73A591-2691-4F6F-9975-0697EE94E51D}|TutoRealCS.csproj|c:\\users\\yuna\\onedrive\\desktop\\works\\kaihatsu\\tutorealcs\\tutorealcs\\models\\bookregistviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3E73A591-2691-4F6F-9975-0697EE94E51D}|TutoRealCS.csproj|solutionrelative:models\\bookregistviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{20044596-0CA7-4BD0-8CA9-DD0B97E56280}|..\\TutoRealBE\\TutoRealBE.csproj|c:\\users\\yuna\\onedrive\\desktop\\works\\kaihatsu\\tutorealcs\\tutorealbe\\context\\bookregistcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -111,37 +98,160 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 21,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "EmpInfoRegist.js",
-              "DocumentMoniker": "C:\\Users\\yuna\\OneDrive\\Desktop\\works\\kaihatsu\\TutoRealCS\\TutoRealCS\\wwwroot\\js\\EmpInfo\\EmpInfoRegist.js",
-              "RelativeDocumentMoniker": "wwwroot\\js\\EmpInfo\\EmpInfoRegist.js",
-              "ToolTip": "C:\\Users\\yuna\\OneDrive\\Desktop\\works\\kaihatsu\\TutoRealCS\\TutoRealCS\\wwwroot\\js\\EmpInfo\\EmpInfoRegist.js",
-              "RelativeToolTip": "wwwroot\\js\\EmpInfo\\EmpInfoRegist.js",
-              "ViewState": "AgIAADQAAAAAAAAAAAAQwD0AAAArAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "Emp.js",
+              "DocumentMoniker": "C:\\Users\\yuna\\OneDrive\\Desktop\\works\\kaihatsu\\TutoRealCS\\TutoRealCS\\wwwroot\\js\\EmpInfo\\Emp.js",
+              "RelativeDocumentMoniker": "wwwroot\\js\\EmpInfo\\Emp.js",
+              "ToolTip": "C:\\Users\\yuna\\OneDrive\\Desktop\\works\\kaihatsu\\TutoRealCS\\TutoRealCS\\wwwroot\\js\\EmpInfo\\Emp.js",
+              "RelativeToolTip": "wwwroot\\js\\EmpInfo\\Emp.js",
+              "ViewState": "AgIAAEoAAAAAAAAAAADwv2cAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2024-10-06T05:24:55.856Z",
-              "IsPinned": true
+              "WhenOpened": "2024-10-08T04:45:05.038Z",
+              "IsPinned": true,
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 10,
+              "Title": "ParentContext.cs",
+              "DocumentMoniker": "C:\\Users\\yuna\\OneDrive\\Desktop\\works\\kaihatsu\\TutoRealCS\\TutoRealBE\\ParentContext.cs",
+              "RelativeDocumentMoniker": "..\\TutoRealBE\\ParentContext.cs",
+              "ToolTip": "C:\\Users\\yuna\\OneDrive\\Desktop\\works\\kaihatsu\\TutoRealCS\\TutoRealBE\\ParentContext.cs",
+              "RelativeToolTip": "..\\TutoRealBE\\ParentContext.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAcwCMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-08T04:14:57.905Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\yuna\\OneDrive\\Desktop\\works\\kaihatsu\\TutoRealCS\\TutoRealCS\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\yuna\\OneDrive\\Desktop\\works\\kaihatsu\\TutoRealCS\\TutoRealCS\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAFYAAAAAAAAAAAAWwGQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-08T01:06:51.977Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "EmpInfoGetResult.cs",
+              "DocumentMoniker": "C:\\Users\\yuna\\OneDrive\\Desktop\\works\\kaihatsu\\TutoRealCS\\TutoRealBE\\Result\\EmpInfoGetResult.cs",
+              "RelativeDocumentMoniker": "..\\TutoRealBE\\Result\\EmpInfoGetResult.cs",
+              "ToolTip": "C:\\Users\\yuna\\OneDrive\\Desktop\\works\\kaihatsu\\TutoRealCS\\TutoRealBE\\Result\\EmpInfoGetResult.cs",
+              "RelativeToolTip": "..\\TutoRealBE\\Result\\EmpInfoGetResult.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-07T12:52:30.486Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
               "Title": "EmpDA.cs",
               "DocumentMoniker": "C:\\Users\\yuna\\OneDrive\\Desktop\\works\\kaihatsu\\TutoRealCS\\TutoRealDA\\EmpInfo\\EmpDA.cs",
               "RelativeDocumentMoniker": "..\\TutoRealDA\\EmpInfo\\EmpDA.cs",
               "ToolTip": "C:\\Users\\yuna\\OneDrive\\Desktop\\works\\kaihatsu\\TutoRealCS\\TutoRealDA\\EmpInfo\\EmpDA.cs",
               "RelativeToolTip": "..\\TutoRealDA\\EmpInfo\\EmpDA.cs",
-              "ViewState": "AgIAABIAAAAAAAAAAAArwCAAAAA/AAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-05T05:06:51.193Z",
-              "IsPinned": true
+              "WhenOpened": "2024-10-07T12:43:24.742Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 12,
+              "Title": "TutoRealBaseBL.cs",
+              "DocumentMoniker": "C:\\Users\\yuna\\OneDrive\\Desktop\\works\\kaihatsu\\TutoRealCS\\TutoRealBL\\TutoRealBaseBL.cs",
+              "RelativeDocumentMoniker": "..\\TutoRealBL\\TutoRealBaseBL.cs",
+              "ToolTip": "C:\\Users\\yuna\\OneDrive\\Desktop\\works\\kaihatsu\\TutoRealCS\\TutoRealBL\\TutoRealBaseBL.cs",
+              "RelativeToolTip": "..\\TutoRealBL\\TutoRealBaseBL.cs",
+              "ViewState": "AgIAADgAAAAAAAAAAAAcwEAAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-07T11:59:41.903Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "EmpInfo.cshtml",
+              "DocumentMoniker": "C:\\Users\\yuna\\OneDrive\\Desktop\\works\\kaihatsu\\TutoRealCS\\TutoRealCS\\Views\\EmpInfo\\EmpInfo.cshtml",
+              "RelativeDocumentMoniker": "Views\\EmpInfo\\EmpInfo.cshtml",
+              "ToolTip": "C:\\Users\\yuna\\OneDrive\\Desktop\\works\\kaihatsu\\TutoRealCS\\TutoRealCS\\Views\\EmpInfo\\EmpInfo.cshtml",
+              "RelativeToolTip": "Views\\EmpInfo\\EmpInfo.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-02T02:37:51.083Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "EmpInfoController.cs",
+              "DocumentMoniker": "C:\\Users\\yuna\\OneDrive\\Desktop\\works\\kaihatsu\\TutoRealCS\\TutoRealCS\\Controllers\\EmpInfoController.cs",
+              "RelativeDocumentMoniker": "Controllers\\EmpInfoController.cs",
+              "ToolTip": "C:\\Users\\yuna\\OneDrive\\Desktop\\works\\kaihatsu\\TutoRealCS\\TutoRealCS\\Controllers\\EmpInfoController.cs",
+              "RelativeToolTip": "Controllers\\EmpInfoController.cs",
+              "ViewState": "AgIAABcAAAAAAAAAAAAswDQAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-05T02:44:13.216Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "BookRegist.cshtml",
+              "DocumentMoniker": "C:\\Users\\yuna\\OneDrive\\Desktop\\works\\kaihatsu\\TutoRealCS\\TutoRealCS\\Views\\Book\\BookRegist.cshtml",
+              "RelativeDocumentMoniker": "Views\\Book\\BookRegist.cshtml",
+              "ToolTip": "C:\\Users\\yuna\\OneDrive\\Desktop\\works\\kaihatsu\\TutoRealCS\\TutoRealCS\\Views\\Book\\BookRegist.cshtml",
+              "RelativeToolTip": "Views\\Book\\BookRegist.cshtml",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-06T07:32:39.61Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "ParentContext.cs",
+              "DocumentMoniker": "C:\\Users\\seraku\\Desktop\\works\\TutoRealCS\\TutoRealBE\\ParentContext.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\..\\seraku\\Desktop\\works\\TutoRealCS\\TutoRealBE\\ParentContext.cs",
+              "ToolTip": "C:\\Users\\seraku\\Desktop\\works\\TutoRealCS\\TutoRealBE\\ParentContext.cs",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\..\\seraku\\Desktop\\works\\TutoRealCS\\TutoRealBE\\ParentContext.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAuwB4AAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-07T00:17:10.148Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "TutoRealBaseBF.cs",
+              "DocumentMoniker": "C:\\Users\\yuna\\OneDrive\\Desktop\\works\\kaihatsu\\TutoRealCS\\TutoRealBF\\TutoRealBaseBF.cs",
+              "RelativeDocumentMoniker": "..\\TutoRealBF\\TutoRealBaseBF.cs",
+              "ToolTip": "C:\\Users\\yuna\\OneDrive\\Desktop\\works\\kaihatsu\\TutoRealCS\\TutoRealBF\\TutoRealBaseBF.cs",
+              "RelativeToolTip": "..\\TutoRealBF\\TutoRealBaseBF.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAgAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-05T04:34:33.393Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "EmpBL.cs",
+              "DocumentMoniker": "C:\\Users\\yuna\\OneDrive\\Desktop\\works\\kaihatsu\\TutoRealCS\\TutoRealBL\\EmpInfo\\EmpBL.cs",
+              "RelativeDocumentMoniker": "..\\TutoRealBL\\EmpInfo\\EmpBL.cs",
+              "ToolTip": "C:\\Users\\yuna\\OneDrive\\Desktop\\works\\kaihatsu\\TutoRealCS\\TutoRealBL\\EmpInfo\\EmpBL.cs",
+              "RelativeToolTip": "..\\TutoRealBL\\EmpInfo\\EmpBL.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAAB0AAABTAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-05T04:53:27.615Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "BookGetResult.cs",
               "DocumentMoniker": "C:\\Users\\yuna\\OneDrive\\Desktop\\works\\kaihatsu\\TutoRealCS\\TutoRealBE\\Result\\BookGetResult.cs",
               "RelativeDocumentMoniker": "..\\TutoRealBE\\Result\\BookGetResult.cs",
@@ -153,91 +263,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "TutoRealBaseDA.cs",
-              "DocumentMoniker": "C:\\Users\\yuna\\OneDrive\\Desktop\\works\\kaihatsu\\TutoRealCS\\TutoRealDA\\TutoRealBaseDA.cs",
-              "RelativeDocumentMoniker": "..\\TutoRealDA\\TutoRealBaseDA.cs",
-              "ToolTip": "C:\\Users\\yuna\\OneDrive\\Desktop\\works\\kaihatsu\\TutoRealCS\\TutoRealDA\\TutoRealBaseDA.cs",
-              "RelativeToolTip": "..\\TutoRealDA\\TutoRealBaseDA.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-06T07:38:52.919Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "BookRegist.cshtml",
-              "DocumentMoniker": "C:\\Users\\yuna\\OneDrive\\Desktop\\works\\kaihatsu\\TutoRealCS\\TutoRealCS\\Views\\Book\\BookRegist.cshtml",
-              "RelativeDocumentMoniker": "Views\\Book\\BookRegist.cshtml",
-              "ToolTip": "C:\\Users\\yuna\\OneDrive\\Desktop\\works\\kaihatsu\\TutoRealCS\\TutoRealCS\\Views\\Book\\BookRegist.cshtml",
-              "RelativeToolTip": "Views\\Book\\BookRegist.cshtml",
-              "ViewState": "AgIAADUAAAAAAAAAAAAewEQAAABkAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-06T07:32:39.61Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "common.js",
-              "DocumentMoniker": "C:\\Users\\yuna\\OneDrive\\Desktop\\works\\kaihatsu\\TutoRealCS\\TutoRealCS\\wwwroot\\js\\common.js",
-              "RelativeDocumentMoniker": "wwwroot\\js\\common.js",
-              "ToolTip": "C:\\Users\\yuna\\OneDrive\\Desktop\\works\\kaihatsu\\TutoRealCS\\TutoRealCS\\wwwroot\\js\\common.js",
-              "RelativeToolTip": "wwwroot\\js\\common.js",
-              "ViewState": "AgIAAG4AAAAAAAAAAAAAwH8AAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2024-10-06T07:14:10.155Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "bookregist.js",
-              "DocumentMoniker": "C:\\Users\\yuna\\OneDrive\\Desktop\\works\\kaihatsu\\TutoRealCS\\TutoRealCS\\wwwroot\\js\\Book\\bookregist.js",
-              "RelativeDocumentMoniker": "wwwroot\\js\\Book\\bookregist.js",
-              "ToolTip": "C:\\Users\\yuna\\OneDrive\\Desktop\\works\\kaihatsu\\TutoRealCS\\TutoRealCS\\wwwroot\\js\\Book\\bookregist.js",
-              "RelativeToolTip": "wwwroot\\js\\Book\\bookregist.js",
-              "ViewState": "AgIAAAIAAAAAAAAAAAAAwAsAAAAPAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2024-10-06T05:22:38.996Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "EmpInfo.cshtml",
-              "DocumentMoniker": "C:\\Users\\yuna\\OneDrive\\Desktop\\works\\kaihatsu\\TutoRealCS\\TutoRealCS\\Views\\EmpInfo\\EmpInfo.cshtml",
-              "RelativeDocumentMoniker": "Views\\EmpInfo\\EmpInfo.cshtml",
-              "ToolTip": "C:\\Users\\yuna\\OneDrive\\Desktop\\works\\kaihatsu\\TutoRealCS\\TutoRealCS\\Views\\EmpInfo\\EmpInfo.cshtml",
-              "RelativeToolTip": "Views\\EmpInfo\\EmpInfo.cshtml",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA0AAACCAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-02T02:37:51.083Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "TutoRealBaseBF.cs",
-              "DocumentMoniker": "C:\\Users\\yuna\\OneDrive\\Desktop\\works\\kaihatsu\\TutoRealCS\\TutoRealBF\\TutoRealBaseBF.cs",
-              "RelativeDocumentMoniker": "..\\TutoRealBF\\TutoRealBaseBF.cs",
-              "ToolTip": "C:\\Users\\yuna\\OneDrive\\Desktop\\works\\kaihatsu\\TutoRealCS\\TutoRealBF\\TutoRealBaseBF.cs",
-              "RelativeToolTip": "..\\TutoRealBF\\TutoRealBaseBF.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAAA4wCMAAAAYAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-05T04:34:33.393Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "EmpInfoGetResult.cs",
-              "DocumentMoniker": "C:\\Users\\yuna\\OneDrive\\Desktop\\works\\kaihatsu\\TutoRealCS\\TutoRealBE\\Result\\EmpInfoGetResult.cs",
-              "RelativeDocumentMoniker": "..\\TutoRealBE\\Result\\EmpInfoGetResult.cs",
-              "ToolTip": "C:\\Users\\yuna\\OneDrive\\Desktop\\works\\kaihatsu\\TutoRealCS\\TutoRealBE\\Result\\EmpInfoGetResult.cs",
-              "RelativeToolTip": "..\\TutoRealBE\\Result\\EmpInfoGetResult.cs",
-              "ViewState": "AgIAAB4AAAAAAAAAAAAYwBEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-04T13:52:37.944Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 7,
               "Title": "EmpInfoGetContext .cs",
               "DocumentMoniker": "C:\\Users\\yuna\\OneDrive\\Desktop\\works\\kaihatsu\\TutoRealCS\\TutoRealBE\\Context\\EmpInfoGetContext .cs",
               "RelativeDocumentMoniker": "..\\TutoRealBE\\Context\\EmpInfoGetContext .cs",
@@ -249,43 +275,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "EmpInfoViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\yuna\\OneDrive\\Desktop\\works\\kaihatsu\\TutoRealCS\\TutoRealCS\\Models\\EmpInfoViewModel.cs",
-              "RelativeDocumentMoniker": "Models\\EmpInfoViewModel.cs",
-              "ToolTip": "C:\\Users\\yuna\\OneDrive\\Desktop\\works\\kaihatsu\\TutoRealCS\\TutoRealCS\\Models\\EmpInfoViewModel.cs",
-              "RelativeToolTip": "Models\\EmpInfoViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-05T03:00:32.254Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "EmpInfoController .cs",
-              "DocumentMoniker": "C:\\Users\\yuna\\OneDrive\\Desktop\\works\\kaihatsu\\TutoRealCS\\TutoRealCS\\Controllers\\EmpInfoController .cs",
-              "RelativeDocumentMoniker": "Controllers\\EmpInfoController .cs",
-              "ToolTip": "C:\\Users\\yuna\\OneDrive\\Desktop\\works\\kaihatsu\\TutoRealCS\\TutoRealCS\\Controllers\\EmpInfoController .cs",
-              "RelativeToolTip": "Controllers\\EmpInfoController .cs",
-              "ViewState": "AgIAABgAAAAAAAAAAAAYwA8AAABHAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-05T02:44:13.216Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\yuna\\OneDrive\\Desktop\\works\\kaihatsu\\TutoRealCS\\TutoRealCS\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\yuna\\OneDrive\\Desktop\\works\\kaihatsu\\TutoRealCS\\TutoRealCS\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAFIAAAAAAAAAAAAewGQAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-05T04:26:57.474Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 6,
               "Title": "BookDA.cs",
               "DocumentMoniker": "C:\\Users\\yuna\\OneDrive\\Desktop\\works\\kaihatsu\\TutoRealCS\\TutoRealDA\\Book\\BookDA.cs",
               "RelativeDocumentMoniker": "..\\TutoRealDA\\Book\\BookDA.cs",
@@ -297,19 +287,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ParentContext.cs",
-              "DocumentMoniker": "C:\\Users\\yuna\\OneDrive\\Desktop\\works\\kaihatsu\\TutoRealCS\\TutoRealBE\\ParentContext.cs",
-              "RelativeDocumentMoniker": "..\\TutoRealBE\\ParentContext.cs",
-              "ToolTip": "C:\\Users\\yuna\\OneDrive\\Desktop\\works\\kaihatsu\\TutoRealCS\\TutoRealBE\\ParentContext.cs",
-              "RelativeToolTip": "..\\TutoRealBE\\ParentContext.cs",
-              "ViewState": "AgIAABcAAAAAAAAAAAAgwCIAAAA6AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-05T05:30:31.33Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 19,
               "Title": "BookConditionContext.cs",
               "DocumentMoniker": "C:\\Users\\yuna\\OneDrive\\Desktop\\works\\kaihatsu\\TutoRealCS\\TutoRealBE\\Context\\BookConditionContext.cs",
               "RelativeDocumentMoniker": "..\\TutoRealBE\\Context\\BookConditionContext.cs",
@@ -321,7 +299,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 20,
               "Title": "BookGetContext.cs",
               "DocumentMoniker": "C:\\Users\\yuna\\OneDrive\\Desktop\\works\\kaihatsu\\TutoRealCS\\TutoRealBE\\Context\\BookGetContext.cs",
               "RelativeDocumentMoniker": "..\\TutoRealBE\\Context\\BookGetContext.cs",
@@ -333,7 +311,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 21,
               "Title": "BookLendReturnContext.cs",
               "DocumentMoniker": "C:\\Users\\yuna\\OneDrive\\Desktop\\works\\kaihatsu\\TutoRealCS\\TutoRealBE\\Context\\BookLendReturnContext.cs",
               "RelativeDocumentMoniker": "..\\TutoRealBE\\Context\\BookLendReturnContext.cs",
@@ -345,7 +323,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 22,
               "Title": "BookListResult.cs",
               "DocumentMoniker": "C:\\Users\\yuna\\OneDrive\\Desktop\\works\\kaihatsu\\TutoRealCS\\TutoRealBE\\Result\\BookListResult.cs",
               "RelativeDocumentMoniker": "..\\TutoRealBE\\Result\\BookListResult.cs",
@@ -357,7 +335,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 14,
               "Title": "BookList.cshtml",
               "DocumentMoniker": "C:\\Users\\yuna\\OneDrive\\Desktop\\works\\kaihatsu\\TutoRealCS\\TutoRealCS\\Views\\Book\\BookList.cshtml",
               "RelativeDocumentMoniker": "Views\\Book\\BookList.cshtml",
@@ -369,20 +347,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "EmpBL.cs",
-              "DocumentMoniker": "C:\\Users\\yuna\\OneDrive\\Desktop\\works\\kaihatsu\\TutoRealCS\\TutoRealBL\\EmpInfo\\EmpBL.cs",
-              "RelativeDocumentMoniker": "..\\TutoRealBL\\EmpInfo\\EmpBL.cs",
-              "ToolTip": "C:\\Users\\yuna\\OneDrive\\Desktop\\works\\kaihatsu\\TutoRealCS\\TutoRealBL\\EmpInfo\\EmpBL.cs",
-              "RelativeToolTip": "..\\TutoRealBL\\EmpInfo\\EmpBL.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAA6AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-05T04:53:27.615Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 23,
               "Title": "BookBL.cs",
               "DocumentMoniker": "C:\\Users\\yuna\\OneDrive\\Desktop\\works\\kaihatsu\\TutoRealCS\\TutoRealBL\\Book\\BookBL.cs",
               "RelativeDocumentMoniker": "..\\TutoRealBL\\Book\\BookBL.cs",
@@ -394,7 +359,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 24,
               "Title": "TutoRealBL.csproj",
               "DocumentMoniker": "C:\\Users\\yuna\\OneDrive\\Desktop\\works\\kaihatsu\\TutoRealCS\\TutoRealBL\\TutoRealBL.csproj",
               "RelativeDocumentMoniker": "..\\TutoRealBL\\TutoRealBL.csproj",
@@ -402,11 +367,12 @@
               "RelativeToolTip": "..\\TutoRealBL\\TutoRealBL.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-10-05T04:42:56.873Z"
+              "WhenOpened": "2024-10-05T04:42:56.873Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 25,
               "Title": "ITutoRealBaseBL.cs",
               "DocumentMoniker": "C:\\Users\\yuna\\OneDrive\\Desktop\\works\\kaihatsu\\TutoRealCS\\TutoRealBL\\ITutoRealBaseBL.cs",
               "RelativeDocumentMoniker": "..\\TutoRealBL\\ITutoRealBaseBL.cs",
@@ -418,7 +384,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 16,
               "Title": "TutoRealBaseBL.cs",
               "DocumentMoniker": "C:\\Users\\yuna\\AppData\\Local\\SourceServer\\666ecf7f644a5ad808ec95c0e49eab54703a18299e1342557e9e2daa7fcbd384\\TutoRealCS\\TutoRealBL\\TutoRealBaseBL.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\AppData\\Local\\SourceServer\\666ecf7f644a5ad808ec95c0e49eab54703a18299e1342557e9e2daa7fcbd384\\TutoRealCS\\TutoRealBL\\TutoRealBaseBL.cs",
@@ -430,7 +396,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 26,
               "Title": "BookRegistContext.cs",
               "DocumentMoniker": "C:\\Users\\yuna\\OneDrive\\Desktop\\works\\kaihatsu\\TutoRealCS\\TutoRealBE\\Context\\BookRegistContext.cs",
               "RelativeDocumentMoniker": "..\\TutoRealBE\\Context\\BookRegistContext.cs",
@@ -442,7 +408,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 17,
               "Title": "BookRegistViewModel.cs",
               "DocumentMoniker": "C:\\Users\\yuna\\OneDrive\\Desktop\\works\\kaihatsu\\TutoRealCS\\TutoRealCS\\Models\\BookRegistViewModel.cs",
               "RelativeDocumentMoniker": "Models\\BookRegistViewModel.cs",
@@ -454,25 +420,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "BookController.cs",
-              "DocumentMoniker": "C:\\Users\\yuna\\OneDrive\\Desktop\\works\\kaihatsu\\TutoRealCS\\TutoRealCS\\Controllers\\BookController.cs",
-              "RelativeDocumentMoniker": "Controllers\\BookController.cs",
-              "ToolTip": "C:\\Users\\yuna\\OneDrive\\Desktop\\works\\kaihatsu\\TutoRealCS\\TutoRealCS\\Controllers\\BookController.cs",
-              "RelativeToolTip": "Controllers\\BookController.cs",
-              "ViewState": "AgIAAOYAAAAAAAAAAAAcwKcAAAAfAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-05T03:42:18.659Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 15,
               "Title": "TutoRealBaseBL.cs",
               "DocumentMoniker": "C:\\Users\\yuna\\OneDrive\\Desktop\\works\\kaihatsu\\TutoRealCS\\TutoRealBL\\TutoRealBaseBL.cs",
               "RelativeDocumentMoniker": "..\\TutoRealBL\\TutoRealBaseBL.cs",
               "ToolTip": "C:\\Users\\yuna\\OneDrive\\Desktop\\works\\kaihatsu\\TutoRealCS\\TutoRealBL\\TutoRealBaseBL.cs",
               "RelativeToolTip": "..\\TutoRealBL\\TutoRealBaseBL.cs",
-              "ViewState": "AgIAADoAAAAAAAAAAADwvz4AAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwFEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-04T13:52:18.467Z"
             }

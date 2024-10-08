@@ -65,8 +65,12 @@
       "PackagePath": "staticwebassets\\js\\Book\\bookregist.js"
     },
     {
-      "Id": "C:\\Users\\yuna\\OneDrive\\Desktop\\works\\kaihatsu\\TutoRealCS\\TutoRealCS\\wwwroot\\js\\EmpInfo\\EmpInfoRegist.js",
-      "PackagePath": "staticwebassets\\js\\EmpInfo\\EmpInfoRegist.js"
+      "Id": "C:\\Users\\yuna\\OneDrive\\Desktop\\works\\kaihatsu\\TutoRealCS\\TutoRealCS\\wwwroot\\js\\EmpInfo\\Emp.js",
+      "PackagePath": "staticwebassets\\js\\EmpInfo\\Emp.js"
+    },
+    {
+      "Id": "C:\\Users\\yuna\\OneDrive\\Desktop\\works\\kaihatsu\\TutoRealCS\\TutoRealCS\\wwwroot\\js\\EmpInfo\\EmpInfoSearch.js",
+      "PackagePath": "staticwebassets\\js\\EmpInfo\\EmpInfoSearch.js"
     },
     {
       "Id": "C:\\Users\\yuna\\OneDrive\\Desktop\\works\\kaihatsu\\TutoRealCS\\TutoRealCS\\wwwroot\\js\\Login\\login.js",

@@ -2,7 +2,6 @@
 using System.Diagnostics;
 using System.Security.Claims;
 using System.Text.Json;
-using TutoRealBE.Context;
 using CE = TutoRealBE.Entity.CommonEntity;
 
 namespace TutoRealBE
@@ -32,7 +31,5 @@ namespace TutoRealBE
         /// 対象データ件数(取得・登録・更新・削除)
         /// </summary>
         public int DataCount { get; set; }
-        public string EmpId7 { get; set; } = string.Empty;
-       
     }
 }
