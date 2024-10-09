@@ -9,6 +9,7 @@ namespace TutoRealBF
     public interface ITutoRealBaseBF
     {
         Task<IEnumerable<ParentContext>> Invoke<TContext>(TContext context) where TContext : ParentContext;
+        Task SelectAsync(EmpInfoGetContext context);
     }
 
     public class TutoRealBaseBF : ITutoRealBaseBF
@@ -36,6 +37,11 @@ namespace TutoRealBF
                 default:
                     throw new ArgumentException("未対応のコンテキストが指定されました。", nameof(context));
             }
+        }
+
+        public Task SelectAsync(EmpInfoGetContext context)
+        {
+            throw new NotImplementedException();
         }
     }
 }

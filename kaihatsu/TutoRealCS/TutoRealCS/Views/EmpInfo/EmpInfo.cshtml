@@ -6,9 +6,10 @@
 @section Styles {
     <link rel="stylesheet" href="~/css/EmpInfo/EmpInfo.css" asp-append-version="true" />
 }
+
 @section Scripts {
     <script src="~/js/EmpInfo/Emp.js"></script>
-}
+ }
 
 <form id="trForm" class="card startform" asp-controller="EmpInfo" asp-action="Regist" method="POST" enctype="multipart/form-data">
     @Html.AntiForgeryToken() @* CSRFトークンの追加 *@
@@ -62,19 +63,71 @@
                     </tr>
                     <tr class="trFixHeight">
                         <td class="button">
-                            <button type="submit" class="btnActive w120">登録</button>
+                            <input type="button" name="Register" class="btnActive w120" value="登録" />
                         </td>
                         <td class="button">
-                            <button type="submit" class="btnSearch w120">検索</button>
+                            <input type="button" name="Search" class="btnSearch w120" value="検索" />
                         </td>
                         <td class="button">
-                            <button type="submit" class="btnDelete w120">削除</button>
+                            <input type="button" name="Delete" class="btnDelete w120" value="削除" />
                         </td>
                     </tr>
                 </table>
             </div>
         </div>
-        @* 検索条件 *@
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
         @* 検索結果 *@
+        <div class="data_grid">
+            <table class="DataGrid">
+                <thead>
+                    <tr>
+                        <th>社員番号</th>
+                        <th>部署コード</th>
+                        <th>姓</th>
+                        <th>名</th>
+                        <th>せい</th>
+                        <th>めい</th>
+                        <th>メールアドレス</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @if (Model != null)
+                    {
+                        foreach (var datas in Model.DataList)
+                        {   
+                            if(datas != null)
+                            {
+                                <tr>
+                                    <td>@datas.EmpId7</td>
+                                    <td>@datas.DeptCode4</td>
+                                    <td>@datas.SeiKanji</td>
+                                    <td>@datas.MeiKanji</td>
+                                    <td>@datas.SeiKana</td>
+                                    <td>@datas.MeiKana</td>
+                                    <td>@datas.MailAddress</td>
+                                </tr> 
+                            }
+                        }
+                    }
+                    else
+                    {
+                        <tr>
+                            <td colspan="7">データがありません。</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
     </div>
 </form>

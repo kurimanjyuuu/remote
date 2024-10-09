@@ -38,8 +38,7 @@ namespace TutoRealBL
 
         public Task<IEnumerable<ParentContext>> Delete(ParentContext context)
         {
-            // 暫定
-            throw new ArgumentException("未対応のコンテキストです。", nameof(context));
+            return DeleteImpl(context);
         }
 
         public Task<IEnumerable<ParentContext>> FileSave(ParentContext context)
@@ -56,6 +55,7 @@ namespace TutoRealBL
                 BookConditionContext cond => await new BookBL(_dbContext, _configuration).SelectAsync(cond),
                 BaseContext parent => await new MasterBL(_dbContext, _configuration).SelectAsync(parent),
                 BookGetContext parent => await new BookBL(_dbContext, _configuration).GetAsync(parent),
+                EmpInfoGetContext parent => await new EmpBL(_dbContext, _configuration).SelectAsync(parent),
                 _ => throw new ArgumentException("未対応のコンテキストです。", nameof(context))
             };
         }
@@ -74,9 +74,17 @@ namespace TutoRealBL
             {
                 BookRegistContext bookregist => await new BookBL(_dbContext, _configuration).UpdateAsync(bookregist),
                 BookLendReturnContext lendreturn => await new BookBL(_dbContext, _configuration).LendReturnAsync(lendreturn),
-                // EmpInfoGetContext empregist => await new EmpBL(_dbContext, _configuration).UpdateAsync(empregist),
+                EmpInfoGetContext empregist => await new EmpBL(_dbContext, _configuration).UpdateAsync(empregist),
                 _ => throw new ArgumentException("未対応のコンテキストです。", nameof(context))
             };
         }
+        private async Task<IEnumerable<ParentContext>> DeleteImpl(ParentContext context)
+        {
+            return context switch
+            {
+                EmpInfoGetContext parent => await new EmpBL(_dbContext, _configuration).DeleteAsync(parent),
+                _ => throw new ArgumentException("未対応のコンテキストです。", nameof(context))
+            };
+        } 
     }
 }

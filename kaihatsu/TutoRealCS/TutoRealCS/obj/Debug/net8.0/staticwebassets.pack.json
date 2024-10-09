@@ -69,8 +69,12 @@
       "PackagePath": "staticwebassets\\js\\EmpInfo\\Emp.js"
     },
     {
-      "Id": "C:\\Users\\yuna\\OneDrive\\Desktop\\works\\kaihatsu\\TutoRealCS\\TutoRealCS\\wwwroot\\js\\EmpInfo\\EmpInfoSearch.js",
-      "PackagePath": "staticwebassets\\js\\EmpInfo\\EmpInfoSearch.js"
+      "Id": "C:\\Users\\yuna\\OneDrive\\Desktop\\works\\kaihatsu\\TutoRealCS\\TutoRealCS\\wwwroot\\js\\EmpInfo\\EmpDelete.js",
+      "PackagePath": "staticwebassets\\js\\EmpInfo\\EmpDelete.js"
+    },
+    {
+      "Id": "C:\\Users\\yuna\\OneDrive\\Desktop\\works\\kaihatsu\\TutoRealCS\\TutoRealCS\\wwwroot\\js\\EmpInfo\\EmpSelect.js",
+      "PackagePath": "staticwebassets\\js\\EmpInfo\\EmpSelect.js"
     },
     {
       "Id": "C:\\Users\\yuna\\OneDrive\\Desktop\\works\\kaihatsu\\TutoRealCS\\TutoRealCS\\wwwroot\\js\\Login\\login.js",

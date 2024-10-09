@@ -29,9 +29,30 @@ namespace TutoRealBL
 
         public async Task<IEnumerable<ParentContext>> InsertAsync(EmpInfoGetContext context)
         {
-            //INSERT実行
+            // INSERT実行
             List<GeneralResult> pk = (List<GeneralResult>)await _da.InsertAsync(context);
             return pk;
+        }
+
+        public async Task<IEnumerable<ParentContext>> UpdateAsync(EmpInfoGetContext context)
+        {
+            // UPDATE実行
+            List<GeneralResult> pk = (List<GeneralResult>)await _da.UpdateAsync(context);
+            return pk;
+        }
+
+        public async Task<IEnumerable<ParentContext>> SelectAsync(EmpInfoGetContext context)
+        {
+            // SELECT実行
+            IEnumerable<EmpInfoGetResult> result = await _da.SelectAsync(context);
+            return result;
+        }
+
+        public async Task<IEnumerable<ParentContext>> DeleteAsync(EmpInfoGetContext context)
+        {
+            // DELETE実行
+            IEnumerable<EmpInfoGetResult> result = await _da.DeleteAsync(context);
+            return result;
         }
     }
 }

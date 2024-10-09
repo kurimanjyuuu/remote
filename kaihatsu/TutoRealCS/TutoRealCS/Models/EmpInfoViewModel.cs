@@ -43,5 +43,14 @@ namespace TutoRealCS.Models
         /// メールアドレス
         /// </summary>
         public string MailAddress { get; set; } = string.Empty;
+
+        /// <summary>
+        /// アクションタイプ
+        /// </summary>
+        public string ActionType { get; set; } = string.Empty; // 追加
+
+        [JsonIgnore]
+        public List<EmpInfoGetResult> DataList = new List<EmpInfoGetResult>();
+    
     }
 }
