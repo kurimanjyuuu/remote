@@ -6,14 +6,14 @@
         }
     });
 
-    // ボタンの初期設定
-    $('.btnActive').data('action', 'Register').text('登録');
-
-    // ボタンのクリックイベント（登録/更新）
+    // 登録ボタンのクリックイベント
     $('.btnActive').on('click', function (e) {
-        e.preventDefault(); // デフォルトのフォーム送信をキャンセル
+        e.preventDefault();
+        insertEmployee();
+    });
 
-        // 入力フィールドの値を取得
+    // 新規登録関数
+    function insertEmployee() {
         var empId = $('#EmpId').val();
         var DeptCode = $('#DeptCode').val();
         var Seikanji = $('#Seikanji').val();
@@ -22,72 +22,10 @@
         var Meikana = $('#Meikana').val();
         var MailAddress = $('#MailAddress').val();
 
-        // EmpIdが空の場合はエラーメッセージを表示
-        if (!empId) {
-            Swal.fire({
-                title: 'エラー',
-                text: '社員番号を入力してください。',
-                icon: 'error',
-                confirmButtonText: 'OK',
-            });
+        if (!validateForm(empId, DeptCode, Seikanji, Meikanji, Seikana, Meikana, MailAddress)) {
             return;
-        }
-        if (!DeptCode) {
-            Swal.fire({
-                title: 'エラー',
-                text: '部署コードを入力してください。',
-                icon: 'error',
-                confirmButtonText: 'OK',
-            });
-            return;
-        }
-        if (!empId) {
-            Swal.fire({
-                title: 'エラー',
-                text: '社員番号を入力してください。',
-                icon: 'error',
-                confirmButtonText: 'OK',
-            });
-            return;
-            if (!Seikanji) {
-                Swal.fire({
-                    title: 'エラー',
-                    text: '姓を入力してください。',
-                    icon: 'error',
-                    confirmButtonText: 'OK',
-                });
-                return;
-            }
-            if (!Meikanji) {
-                Swal.fire({
-                    title: 'エラー',
-                    text: '名を入力してください。',
-                    icon: 'error',
-                    confirmButtonText: 'OK',
-                });
-                return;
-                if (!Seikana) {
-                    Swal.fire({
-                        title: 'エラー',
-                        text: 'せいを入力してください。',
-                        icon: 'error',
-                        confirmButtonText: 'OK',
-                    });
-                    return;
-                }
-                if (!empId) {
-                    Swal.fire({
-                        title: 'エラー',
-                        text: '社員番号を入力してください。',
-                        icon: 'error',
-                        confirmButtonText: 'OK',
-                    });
-                    return;
-                }
-            }
         }
 
-        var actionType = $(this).data('action'); // ボタンのアクションタイプを取得
         var formData = {
             EmpId7: empId,
             DeptCode4: DeptCode,
@@ -96,10 +34,9 @@
             Seikana: Seikana,
             Meikana: Meikana,
             MailAddress: MailAddress,
-            ActionType: actionType // 操作タイプを設定
+            ActionType: 'Register'
         };
 
-        // AJAXリクエスト
         $.ajax({
             url: '/EmpInfo/Regist',
             type: 'POST',
@@ -108,169 +45,62 @@
             success: function (response) {
                 if (response.success) {
                     Swal.fire({
-                        title: actionType === 'Register' ? '登録完了' : '更新完了',
+                        title: '登録完了',
                         icon: 'success',
                         confirmButtonText: 'OK',
                     }).then(() => {
-                        window.location.reload(); // 画面をリロード
+                        window.location.reload();
                     });
                 } else {
-                    Swal.fire({
-                        title: 'エラー',
-                        text: response.message,
-                        icon: 'error',
-                        confirmButtonText: 'OK',
-                    });
+                    showError(response.message);
                 }
             },
             error: function (xhr) {
-                console.log(xhr.responseText);
-                Swal.fire({
-                    title: 'エラー',
-                    text: '処理に失敗しました。' + xhr.status + ': ' + xhr.statusText,
-                    icon: 'error',
-                    confirmButtonText: 'OK',
-                });
+                showError('処理に失敗しました。' + xhr.status + ': ' + xhr.statusText);
             }
         });
-    });
-
-    // 検索ボタンのクリックイベント
-    $('.btnSearch').on('click', function (e) {
-        e.preventDefault(); // デフォルトのフォーム送信をキャンセル
-
-        var formData = {
-            EmpId7: $('#EmpId').val(), // 社員番号を取得
-            ActionType: 'Search' // アクションタイプを設定
-        };
-
-        // AJAXリクエスト
-        $.ajax({
-            url: '/EmpInfo/Regist',
-            type: 'POST',
-            contentType: 'application/json',
-            data: JSON.stringify(formData),
-            success: function (response) {
-                console.log(response); // レスポンスを確認
-                // 検索結果が存在する場合、フォームに値を設定
-                if (response.success && response.data) {
-                    $('#DeptCode').val(response.data.DeptCode4);
-                    $('#Seikanji').val(response.data.Seikanji);
-                    $('#Meikanji').val(response.data.Meikanji);
-                    $('#Seikana').val(response.data.Seikana);
-                    $('#Meikana').val(response.data.Meikana);
-                    $('#MailAddress').val(response.data.MailAddress);
-
-                    // ボタンのアクションを更新
-                    $('.btnActive').data('action', 'Update').text('更新'); // 更新ボタンに変更
-                } else {
-                    Swal.fire({
-                        title: 'エラー',
-                        text: response.message || 'データが見つかりませんでした。',
-                        icon: 'error',
-                        confirmButtonText: 'OK',
-                    });
-                }
-            },
-            error: function (xhr) {
-                console.log(xhr.responseText);
-                Swal.fire({
-                    title: 'エラー',
-                    text: '検索処理に失敗しました。' + xhr.status + ': ' + xhr.statusText,
-                    icon: 'error',
-                    confirmButtonText: 'OK',
-                });
-            }
-        });
-    });
-
-    // 削除ボタンのクリックイベント
-    $('.btnDelete').on('click', function (e) {
-        e.preventDefault(); // デフォルトのフォーム送信をキャンセル
-        var empId = $('#EmpId').val();
-
-        // EmpIdが空の場合は削除処理を行わない
-        if (!empId) {
-            Swal.fire({
-                title: 'エラー',
-                text: '削除する社員番号を入力してください。',
-                icon: 'error',
-                confirmButtonText: 'OK',
-            });
-            return;
-        }
-
-        var formData = {
-            EmpId7: empId,
-            ActionType: 'Delete' // ボタンのアクションタイプ
-        };
-
-        // AJAXリクエスト
-        $.ajax({
-            url: '/EmpInfo/Regist',
-            type: 'POST',
-            contentType: 'application/json',
-            data: JSON.stringify(formData),
-            success: function (response) {
-                if (response.success) {
-                    Swal.fire({
-                        title: '削除しました',
-                        icon: 'success',
-                        confirmButtonText: 'OK',
-                    }).then(() => {
-                        window.location.reload(); // 画面をリロード
-                    });
-                } else {
-                    Swal.fire({
-                        title: 'エラー',
-                        text: response.message,
-                        icon: 'error',
-                        confirmButtonText: 'OK',
-                    });
-                }
-            },
-            error: function (xhr) {
-                console.log(xhr.responseText);
-                Swal.fire({
-                    title: 'エラー',
-                    text: '削除処理に失敗しました。' + xhr.status + ': ' + xhr.statusText,
-                    icon: 'error',
-                    confirmButtonText: 'OK',
-                });
-            }
-        });
-    });
+    }
 
     // バリデーション関数
-    function validateForm(data) {
-        if (!data.EmpId7) {
-            showErrorModal(REQUIRE_TITLE, '社員番号' + REQUIRE_MSG);
+    function validateForm(empId, DeptCode, Seikanji, Meikanji, Seikana, Meikana, MailAddress) {
+        if (!empId) {
+            showError('社員番号は必須です。');
             return false;
         }
-        if (!data.DeptCode4) {
-            showErrorModal(REQUIRE_TITLE, '部署コード' + REQUIRE_MSG);
+        if (!DeptCode) {
+            showError('部署コードは必須です。');
             return false;
         }
-        if (!data.Seikanji) {
-            showErrorModal(REQUIRE_TITLE, '姓' + REQUIRE_MSG);
+        if (!Seikanji) {
+            showError('姓は必須です。');
             return false;
         }
-        if (!data.Meikanji) {
-            showErrorModal(REQUIRE_TITLE, '名' + REQUIRE_MSG);
+        if (!Meikanji) {
+            showError('名は必須です。');
             return false;
         }
-        if (!data.Seikana) {
-            showErrorModal(REQUIRE_TITLE, 'せい' + REQUIRE_MSG);
+        if (!Seikana) {
+            showError('せいは必須です。');
             return false;
         }
-        if (!data.Meikana) {
-            showErrorModal(REQUIRE_TITLE, 'めい' + REQUIRE_MSG);
+        if (!Meikana) {
+            showError('めいは必須です。');
             return false;
         }
-        if (!data.MailAddress) {
-            showErrorModal(REQUIRE_TITLE, 'メールアドレス' + REQUIRE_MSG);
+        if (!MailAddress) {
+            showError('メールアドレスは必須です。');
             return false;
         }
         return true;
+    }
+
+    // エラーメッセージ表示関数
+    function showError(message) {
+        Swal.fire({
+            title: 'エラー',
+            text: message,
+            icon: 'error',
+            confirmButtonText: 'OK',
+        });
     }
 });

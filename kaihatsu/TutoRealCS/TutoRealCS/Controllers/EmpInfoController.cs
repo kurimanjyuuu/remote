@@ -39,21 +39,16 @@ namespace TutoRealCS.Controllers
                     return Json(new { success = false, message = "データが不正です" });
                 }
 
-                if (formData.ActionType == "Register")
+                switch (formData.ActionType)
                 {
-                    return await HandleRegister(formData);
-                }
-                else if (formData.ActionType == "Search")
-                {
-                    return await HandleSearch(formData);
-                }
-                else if (formData.ActionType == "Delete")
-                {
-                    return await HandleDelete(formData);
-                }
-                else
-                {
-                    return Json(new { success = false, message = "不正なリクエスト" });
+                    case "Register":
+                        return await HandleRegister(formData);
+                    case "Search":
+                        return await HandleSearch(formData);
+                    case "Delete":
+                        return await HandleDelete(formData);
+                    default:
+                        return Json(new { success = false, message = "不正なリクエスト" });
                 }
             }
             catch (SqlException sqlEx)
@@ -91,18 +86,26 @@ namespace TutoRealCS.Controllers
         private async Task<IActionResult> HandleSearch(EmpInfoViewModel formData)
         {
             Debug.WriteLine("Searchボタンがクリックされました。");
+            Debug.WriteLine($"DeptCode4: {formData.DeptCode4}, Seikanji: {formData.Seikanji}, Meikanji: {formData.Meikanji}, Seikana: {formData.Seikana}, Meikana: {formData.Meikana}, MailAddress: {formData.MailAddress}");
 
             var context = new EmpInfoGetContext()
             {
                 ProcessKbn = CE.ProcessKbn.Select,
-                EmpId7 = formData.EmpId7
+                EmpId7 = formData.EmpId7,
+                DeptCode4 = formData.DeptCode4,
+                Seikanji = formData.Seikanji,
+                Meikanji = formData.Meikanji,
+                Seikana = formData.Seikana,
+                Meikana = formData.Meikana,
+                MailAddress = formData.MailAddress,
             };
 
             var result_bf = await _baseBF.Invoke(context);
+            Debug.WriteLine($"取得したデータ数: {result_bf.Count()}"); 
             var results = result_bf.Cast<EmpInfoGetResult>().ToList();
             formData.DataList = results;
 
-            return Json(new { success = true, data = results });
+            return View("EmpInfo", formData); 
         }
 
         private async Task<IActionResult> HandleDelete(EmpInfoViewModel formData)
