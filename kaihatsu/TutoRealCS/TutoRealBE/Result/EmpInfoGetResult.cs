@@ -27,37 +27,47 @@ namespace TutoRealBE.Context
 
         /// <summary>
         /// 社員番号
-        /// </summary>
-        public string EmpId7 { get; set; } = string.Empty;
+        /// </summary>  
+        public string empId7 { get; set; } = string.Empty; // char
 
         /// <summary>
         /// 部署コード
-        /// </summary>
-        public string DeptCode4 { get; set; } = string.Empty;
+        /// </summary>  
+        public string deptCode4 { get; set; } = string.Empty; // nchar
 
         /// <summary>
         /// 姓
         /// </summary>
-        public string SeiKanji { get; set; } = string.Empty;
+        public string seiKanji { get; set; } = string.Empty;
 
         /// <summary>
         /// 名
         /// </summary>
-        public string MeiKanji { get; set; } = string.Empty;
+        public string meiKanji { get; set; } = string.Empty;
 
         /// <summary>
         /// せい
         /// </summary>
-        public string SeiKana { get; set; } = string.Empty;
+        public string seiKana { get; set; } = string.Empty;
 
         /// <summary>
         /// めい
         /// </summary>
-        public string MeiKana { get; set; } = string.Empty;
+        public string meiKana { get; set; } = string.Empty;
 
         /// <summary>
         /// メールアドレス
         /// </summary>
-        public string MailAddress { get; set; } = string.Empty;
+        public string mailAddress { get; set; } = string.Empty;
+
+        /// <summary>
+        /// 入社日
+        /// </summary>
+        public DateTime? joinDate { get; set; } = new DateTime(DateTime.Now.Year, DateTime.Now.Month, 1);
+
+        /// <summary>
+        /// 退職日
+        /// </summary>
+        public DateTime? retireDate { get; set; } = new DateTime(DateTime.Now.Year, DateTime.Now.Month, 1).AddMonths(1).AddDays(-1);
     }
 }

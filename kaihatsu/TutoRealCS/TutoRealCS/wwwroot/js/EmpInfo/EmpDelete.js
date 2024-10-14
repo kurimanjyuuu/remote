@@ -15,45 +15,16 @@
     // 削除関数
     function deleteEmployee() {
         var empId = $('#EmpId').val();
-        var DeptCode = $('#DeptCode').val();
-        var Seikanji = $('#Seikanji').val();
-        var Meikanji = $('#Meikanji').val();
-        var Seikana = $('#Seikana').val();
-        var Meikana = $('#Meikana').val();
-        var MailAddress = $('#MailAddress').val();
+        var retireDate = $('#RetireDate').val();
 
-        // すべての必須項目が入力されているかチェック
-        if (!empId) {
-            showError('社員番号を入力してください。');
-            return;
-        }
-        if (!DeptCode) {
-            showError('部署コードを入力してください。');
-            return;
-        }
-        if (!Seikanji) {
-            showError('姓を入力してください。');
-            return;
-        }
-        if (!Meikanji) {
-            showError('名を入力してください。');
-            return;
-        }
-        if (!Seikana) {
-            showError('せいを入力してください。');
-            return;
-        }
-        if (!Meikana) {
-            showError('めいを入力してください。');
-            return;
-        }
-        if (!MailAddress) {
-            showError('メールアドレスを入力してください。');
+        // バリデーションを追加
+        if (!validateForm(empId, retireDate)) {
             return;
         }
 
         var formData = {
-            EmpId7: empId,
+            empId7: empId,
+            retireDate: retireDate,
             ActionType: 'Delete'
         };
 
@@ -79,6 +50,26 @@
                 showError('削除処理に失敗しました。' + xhr.status + ': ' + xhr.statusText);
             }
         });
+    }
+
+    // すべての必須項目が入力されているかチェック
+    function validateForm(empId, retireDate) {
+        let errorMessage = '';
+
+        if (!empId && !retireDate) {
+            errorMessage = '社員番号と退職日を入力してください。';
+        } else if (!empId) {
+            errorMessage = '社員番号は必須です。';
+        } else if (!retireDate) {
+            errorMessage = '退職日は必須です。';
+        }
+
+        if (errorMessage) {
+            showError(errorMessage);
+            return false;
+        }
+
+        return true;
     }
 
     // エラーメッセージ表示関数

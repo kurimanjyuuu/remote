@@ -5,25 +5,28 @@ public class Startup
 {
     public void ConfigureServices(IServiceCollection services)
     {
-        // 他のサービスの設定...
-
+        // 認証サービスの設定
         services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
             .AddCookie(options =>
             {
-                options.LoginPath = "/Login/Index"; // ログインページのパスを指定
-                options.AccessDeniedPath = "/Home/Error"; // アクセス拒否ページのパスを指定
-                // その他のオプション...
+                options.LoginPath = "/Login/Index"; // ログインページのパス
+                options.AccessDeniedPath = "/Home/Error"; // アクセス拒否ページのパス
             });
 
+        // セッション管理の設定
         services.AddSession(options =>
         {
-            options.IdleTimeout = TimeSpan.FromMinutes(30); // セッションが30分でタイムアウトするように設定
-            options.Cookie.HttpOnly = true; // クライアントサイドのスクリプトからアクセス不可にする
-            options.Cookie.SecurePolicy = CookieSecurePolicy.Always; // HTTPSを使用している場合にのみ送信されるようにする
-            options.Cookie.IsEssential = true; // GDPRにおいて必須とする
+            options.IdleTimeout = TimeSpan.FromMinutes(30); // セッションのタイムアウト設定
+            options.Cookie.HttpOnly = true; // クライアントからのスクリプトアクセスを禁止
+            options.Cookie.SecurePolicy = CookieSecurePolicy.Always; // HTTPSでの送信を強制
+            options.Cookie.IsEssential = true; // GDPR対応
         });
 
-        services.AddControllersWithViews();
+        // コントローラーとJSONオプションの設定
+        services.AddControllersWithViews().AddJsonOptions(options =>
+        {
+            options.JsonSerializerOptions.PropertyNamingPolicy = null; // プロパティ名のポリシーを無効
+        });
     }
 
     public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
@@ -42,17 +45,15 @@ public class Startup
         app.UseStaticFiles();
         app.UseRouting();
 
-        app.UseSession(); // セッションミドルウェアを追加する
-
-        app.UseAuthentication(); // 認証ミドルウェアを追加する
+        app.UseSession(); // セッションミドルウェアを追加
+        app.UseAuthentication(); // 認証ミドルウェアを追加
         app.UseAuthorization();
 
         app.UseEndpoints(endpoints =>
         {
             endpoints.MapControllerRoute(
                 name: "default",
-                pattern: "{controller=Login}/{action=Index}/{id?}"); // ログインページへのマッピング
+                pattern: "{controller=Login}/{action=Index}/{id?}"); // デフォルトルートの設定
         });
-
     }
 }

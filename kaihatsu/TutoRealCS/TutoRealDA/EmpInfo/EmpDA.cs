@@ -25,15 +25,16 @@ namespace TutoRealDA.Emp
             StringBuilder query = new StringBuilder();
 
             // 登録クエリ
-            query.AppendLine($"INSERT INTO {TblSet(TBLNAME.M_EMPMASTER)} (EmpId7, Seikanji, Meikanji, Seikana, Meikana, DeptCode4, MailAddress) VALUES ");
+            query.AppendLine($"INSERT INTO {TblSet(TBLNAME.M_EMPMASTER)} (EmpId7, SeiKanji, MeiKanji, SeiKana, MeiKana, DeptCode4, MailAddress, JoinDate) VALUES ");
             query.AppendLine("(");
             query.AppendLine("@EmpId7");
-            query.AppendLine(",@Seikanji");
-            query.AppendLine(",@Meikanji");
-            query.AppendLine(",@Seikana");
-            query.AppendLine(",@Meikana");
+            query.AppendLine(",@SeiKanji");
+            query.AppendLine(",@MeiKanji");
+            query.AppendLine(",@SeiKana");
+            query.AppendLine(",@MeiKana");
             query.AppendLine(",@DeptCode4");
             query.AppendLine(",@MailAddress");
+            query.AppendLine(",@JoinDate");
             query.AppendLine(")");
 
             return query.ToString();
@@ -44,14 +45,15 @@ namespace TutoRealDA.Emp
             string query = MakeInsertQuery(context);
             var parameters = new
             {
-                @EmpId7 = context.EmpId7,
-                DeptCode4 = context.DeptCode4,
-                @Seikanji = context.Seikanji,
-                @Meikanji = context.Meikanji,
-                @Seikana = context.Seikana,
-                @Meikana = context.Meikana,
-                @MailAddress = context.MailAddress,
-            
+                @empId7 = context.empId7,
+                deptCode4 = context.deptCode4,
+                @seiKanji = context.seiKanji,
+                @meiKanji = context.meiKanji,
+                @seiKana = context.seiKana,
+                @meiKana = context.meiKana,
+                @mailAddress = context.mailAddress,
+                @joinDate = context.joinDate,
+
             };
             string key = await this.Insert<string>(query, parameters);
 
@@ -72,10 +74,10 @@ namespace TutoRealDA.Emp
 
             // 更新クエリ
             query.AppendLine($"UPDATE {TblSet(TBLNAME.M_EMPMASTER)} SET ");
-            query.AppendLine("Seikanji = @Seikanji,");
-            query.AppendLine("Meikanji = @Meikanji,");
-            query.AppendLine("Seikana = @Seikana,");
-            query.AppendLine("Meikana = @Meikana,");
+            query.AppendLine("SeiKanji = @SeiKanji,");
+            query.AppendLine("MeiKanji = @MeiKanji,");
+            query.AppendLine("SeiKana = @SeiKana,");
+            query.AppendLine("MeiKana = @MeiKana,");
             query.AppendLine("DeptCode4 = @DeptCode4,");
             query.AppendLine("MailAddress = @MailAddress ");
             query.AppendLine("WHERE EmpId7 = @EmpId7;"); // EmpId7を条件として指定
@@ -85,16 +87,16 @@ namespace TutoRealDA.Emp
 
         public async Task<IEnumerable<ParentContext>> UpdateAsync(EmpInfoGetContext context)
         {
-            string query = MakeInsertQuery(context);
+            string query = MakeUpdateQuery(context);
             var parameters = new
             {
-                @EmpId7 = context.EmpId7,
-                DeptCode4 = context.DeptCode4,
-                @Seikanji = context.Seikanji,
-                @Meikanji = context.Meikanji,
-                @Seikana = context.Seikana,
-                @Meikana = context.Meikana,
-                @MailAddress = context.MailAddress,
+                @empId7 = context.  empId7,
+                deptCode4 = context.deptCode4,
+                @seiKanji = context.seiKanji,
+                @meiKanji = context.meiKanji,
+                @seiKana = context.seiKana,
+                @meiKana = context.meiKana,
+                @mailAddress = context.mailAddress,
 
             };
             string key = await this.Insert<string>(query, parameters);
@@ -129,13 +131,14 @@ namespace TutoRealDA.Emp
             string query = MakeSelectQuery(context);
             var parameters = new
             {
-                @EmpId7 = context.EmpId7,
-                DeptCode4 = context.DeptCode4,
-                @Seikanji = context.Seikanji,
-                @Meikanji = context.Meikanji,
-                @Seikana = context.Seikana,
-                @Meikana = context.Meikana,
-                @MailAddress = context.MailAddress,
+                @empId7 = context.empId7,
+                deptCode4 = context.deptCode4,
+                @seiKanji = context.seiKanji,
+                @meiKanji = context.meiKanji,
+                @seiKana = context.seiKana,
+                @meiKana = context.meiKana,
+                @mailAddress = context.mailAddress,
+                @joinDate = context.joinDate,
             };
             IEnumerable<EmpInfoGetResult> result = await this.Select<EmpInfoGetResult>(query, parameters);
             return result;
@@ -156,7 +159,7 @@ namespace TutoRealDA.Emp
             string query = MakeDeleteQuery(context);
             var parameters = new
             {
-                @EmpId7 = context.EmpId7,
+                @EmpId7 = context.empId7,
             };
             IEnumerable<EmpInfoGetResult> result = await this.Select<EmpInfoGetResult>(query, parameters);
             return result;

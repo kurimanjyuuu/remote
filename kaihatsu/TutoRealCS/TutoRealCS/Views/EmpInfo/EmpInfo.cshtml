@@ -1,5 +1,4 @@
-﻿@* ViewModelを指定する *@
-@model EmpInfoViewModel
+﻿@model EmpInfoViewModel
 @{
     ViewData["Title"] = "社員情報";
 }
@@ -15,7 +14,7 @@
 }
 
 <form id="trForm" class="card startform" asp-controller="EmpInfo" asp-action="Regist" method="POST" enctype="multipart/form-data">
-    @Html.AntiForgeryToken() @* CSRFトークンの追加 *@
+    @Html.AntiForgeryToken()
 
     <div class="maincontents-layout">
         <div class="card">
@@ -25,48 +24,67 @@
                     <tr class="trFixHeight">
                         <td class="tdLabel">社員番号：</td>
                         <td class="tdItem">
-                            <input type="text" asp-for="@Model.EmpId7" id="EmpId" class="textbox w240" maxlength="7" />
+                            <input type="text" asp-for="@Model.empId7" id="EmpId" class="textbox w240" maxlength="7" />
                         </td>
                     </tr>
                     <tr class="trFixHeight">
                         <td class="tdLabel">部署コード：</td>
                         <td class="tdItem">
-                            <input type="text" asp-for="@Model.DeptCode4" id="DeptCode" class="textbox w240" maxlength="4" />
+                            <input type="text" asp-for="@Model.deptCode4" id="DeptCode" class="textbox w240" maxlength="4" />
                         </td>
                     </tr>
                     <tr class="trFixHeight">
                         <td class="tdLabel">姓：</td>
                         <td class="tdItem">
-                            <input type="text" asp-for="@Model.Seikanji" id="Seikanji" class="textbox w240" maxlength="20" />
+                            <input type="text" asp-for="@Model.seiKanji" id="Seikanji" class="textbox w240" maxlength="20" />
                         </td>
                     </tr>
                     <tr class="trFixHeight">
                         <td class="tdLabel">名：</td>
                         <td class="tdItem">
-                            <input type="text" asp-for="@Model.Meikanji" id="Meikanji" class="textbox w240" maxlength="20" />
+                            <input type="text" asp-for="@Model.meiKanji" id="Meikanji" class="textbox w240" maxlength="20" />
                         </td>
                     </tr>
                     <tr class="trFixHeight">
                         <td class="tdLabel">せい：</td>
                         <td class="tdItem">
-                            <input type="text" asp-for="@Model.Seikana" id="Seikana" class="textbox w240" maxlength="20" />
+                            <input type="text" asp-for="@Model.seiKana" id="Seikana" class="textbox w240" maxlength="20" />
                         </td>
                     </tr>
                     <tr class="trFixHeight">
                         <td class="tdLabel">めい：</td>
                         <td class="tdItem">
-                            <input type="text" asp-for="@Model.Meikana" id="Meikana" class="textbox w240" maxlength="20" />
+                            <input type="text" asp-for="@Model.meiKana" id="Meikana" class="textbox w240" maxlength="20" />
                         </td>
                     </tr>
                     <tr class="trFixHeight">
                         <td class="tdLabel">メールアドレス：</td>
                         <td class="tdItem">
-                            <input type="text" asp-for="@Model.MailAddress" id="MailAddress" class="textbox w240" maxlength="50" />
+                            <input type="text" asp-for="@Model.mailAddress" id="MailAddress" class="textbox w240" maxlength="50" />
+                        </td>
+                    </tr>
+                    <tr class="trFixHeight">
+                        <td class="tdLabel">入社日：</td>
+                        <td class="tdItem">
+                            <input type="date" asp-for="@Model.joinDate" id="JoinDate" class="textbox w240" />
+                        </td>
+                    </tr>
+                    <tr class="trFixHeight">
+                        <td class="tdLabel">退職日：</td>
+                        <td class="tdItem">
+                            <input type="date" asp-for="@Model.retireDate" id="RetireDate" class="textbox w240" />
                         </td>
                     </tr>
                     <tr class="trFixHeight">
                         <td class="button">
-                            <input type="button" name="Register" class="btnActive w120" value="登録" />
+                            @if (Model != null)
+                            {
+                                <input type="button" name="Register" class="btnActive w120" value="@(!string.IsNullOrWhiteSpace(Model.empId7) ? "更新" : "登録")" />
+                            }
+                            else
+                            {
+                                <input type="button" name="Register" class="btnActive w120" value="登録" />
+                            }
                         </td>
                         <td class="button">
                             <input type="button" name="Search" class="btnSearch w120" value="検索" />
@@ -101,31 +119,30 @@
                         <th>せい</th>
                         <th>めい</th>
                         <th>メールアドレス</th>
+                        <th>入社日</th>
                     </tr>
                 </thead>
                 <tbody>
-                    @if (Model != null)
+                    @if (Model != null && Model.DataList != null && Model.DataList.Count > 0)
                     {
                         foreach (var datas in Model.DataList)
                         {
-                            if (datas != null)
-                            {
-                                <tr>
-                                    <td>@datas.EmpId7</td>
-                                    <td>@datas.DeptCode4</td>
-                                    <td>@datas.SeiKanji</td>
-                                    <td>@datas.MeiKanji</td>
-                                    <td>@datas.SeiKana</td>
-                                    <td>@datas.MeiKana</td>
-                                    <td>@datas.MailAddress</td>
-                                </tr>
-                            }
+                            <tr>
+                                <td>@datas.empId7</td>
+                                <td>@datas.deptCode4</td>
+                                <td>@datas.seiKanji</td>
+                                <td>@datas.meiKanji</td>
+                                <td>@datas.seiKana</td>
+                                <td>@datas.meiKana</td>
+                                <td>@datas.mailAddress</td>
+                                <td>@(datas.joinDate.HasValue ? datas.joinDate.Value.ToString("yyyy/MM/dd") : "")</td>
+                            </tr>
                         }
                     }
                     else
                     {
                         <tr>
-                            <td colspan="7">データがありません。</td>
+                            <td colspan="8">データがありません。</td>
                         </tr>
                     }
                 </tbody>
