@@ -41,6 +41,9 @@ namespace TutoRealCS.Controllers
                 case MasterManageController:    //マスターメンテ
                     ChangeLayout(true, true, true, "戻る", "更新");
                     break;
+                case EmpInfoController:            
+                    ChangeLayout(true, true, true, "戻る", "登録");
+                    break;
             }
 
             //永続保持情報を取得

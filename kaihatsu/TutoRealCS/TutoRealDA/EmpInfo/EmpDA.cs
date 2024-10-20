@@ -25,16 +25,17 @@ namespace TutoRealDA.Emp
             StringBuilder query = new StringBuilder();
 
             // 登録クエリ
-            query.AppendLine($"INSERT INTO {TblSet(TBLNAME.M_EMPMASTER)} (EmpId7, SeiKanji, MeiKanji, SeiKana, MeiKana, DeptCode4, MailAddress, JoinDate) VALUES ");
+            query.AppendLine($"INSERT INTO {TblSet(TBLNAME.M_EMPMASTER)} (EmpId7, Seikanji, Meikanji, Seikana, Meikana, DeptCode4, MailAddress, JoinDate, UpdateDatetime) VALUES ");
             query.AppendLine("(");
             query.AppendLine("@EmpId7");
-            query.AppendLine(",@SeiKanji");
-            query.AppendLine(",@MeiKanji");
-            query.AppendLine(",@SeiKana");
-            query.AppendLine(",@MeiKana");
+            query.AppendLine(",@Seikanji");
+            query.AppendLine(",@Meikanji");
+            query.AppendLine(",@Seikana");
+            query.AppendLine(",@Meikana");
             query.AppendLine(",@DeptCode4");
             query.AppendLine(",@MailAddress");
             query.AppendLine(",@JoinDate");
+            query.AppendLine(",GETDATE()");
             query.AppendLine(")");
 
             return query.ToString();
@@ -53,7 +54,6 @@ namespace TutoRealDA.Emp
                 @meiKana = context.meiKana,
                 @mailAddress = context.mailAddress,
                 @joinDate = context.joinDate,
-
             };
             string key = await this.Insert<string>(query, parameters);
 
@@ -74,31 +74,37 @@ namespace TutoRealDA.Emp
 
             // 更新クエリ
             query.AppendLine($"UPDATE {TblSet(TBLNAME.M_EMPMASTER)} SET ");
-            query.AppendLine("SeiKanji = @SeiKanji,");
-            query.AppendLine("MeiKanji = @MeiKanji,");
-            query.AppendLine("SeiKana = @SeiKana,");
-            query.AppendLine("MeiKana = @MeiKana,");
+            query.AppendLine("Seikanji = @Seikanji,");
+            query.AppendLine("Meikanji = @Meikanji,");
+            query.AppendLine("Seikana = @Seikana,");
+            query.AppendLine("Meikana = @Meikana,");
             query.AppendLine("DeptCode4 = @DeptCode4,");
-            query.AppendLine("MailAddress = @MailAddress ");
+            query.AppendLine("MailAddress = @MailAddress,");
+            query.AppendLine("RetireDate = @RetireDate,"); 
+            query.AppendLine("UpdateDatetime = GETDATE()");
             query.AppendLine("WHERE EmpId7 = @EmpId7;"); // EmpId7を条件として指定
 
             return query.ToString();
         }
 
+
         public async Task<IEnumerable<ParentContext>> UpdateAsync(EmpInfoGetContext context)
         {
             string query = MakeUpdateQuery(context);
+
             var parameters = new
             {
-                @empId7 = context.  empId7,
+                empId7 = context.empId7,
                 deptCode4 = context.deptCode4,
-                @seiKanji = context.seiKanji,
-                @meiKanji = context.meiKanji,
-                @seiKana = context.seiKana,
-                @meiKana = context.meiKana,
-                @mailAddress = context.mailAddress,
-
+                seiKanji = context.seiKanji,
+                meiKanji = context.meiKanji,
+                seiKana = context.seiKana,
+                meiKana = context.meiKana,
+                mailAddress = context.mailAddress,
+                retireDate = context.retireDate,
+                updateDatetime = context.updateDatetime
             };
+
             string key = await this.Insert<string>(query, parameters);
 
             List<GeneralResult> ret = new List<GeneralResult>();
@@ -109,6 +115,7 @@ namespace TutoRealDA.Emp
                 PK = key,
             };
             ret.Add(r);
+
             return ret;
         }
 
@@ -116,15 +123,14 @@ namespace TutoRealDA.Emp
         {
             StringBuilder query = new StringBuilder();
 
-            // SELECT *
-            query.AppendLine("SELECT *");
+            // セレクトクエリ
+            query.AppendLine("SELECT EmpId7, SeiKanji, Meikanji, SeiKana, MeiKana, MailAddress, DeptCode4, JoinDate, RetireDate, CONVERT(varchar, UpdateDatetime, 121) AS UpdateDatetime");
             query.AppendLine($"FROM {TblSet(TBLNAME.M_EMPMASTER)}");
-
             // 取得条件
             query.AppendLine("WHERE EmpId7 = @EmpId7");
-
             return query.ToString();
         }
+
 
         public async Task<IEnumerable<EmpInfoGetResult>> SelectAsync(EmpInfoGetContext context)
         {
@@ -138,7 +144,7 @@ namespace TutoRealDA.Emp
                 @seiKana = context.seiKana,
                 @meiKana = context.meiKana,
                 @mailAddress = context.mailAddress,
-                @joinDate = context.joinDate,
+                @joinDate = context.joinDate,   
             };
             IEnumerable<EmpInfoGetResult> result = await this.Select<EmpInfoGetResult>(query, parameters);
             return result;
@@ -147,9 +153,9 @@ namespace TutoRealDA.Emp
         private static string MakeDeleteQuery(EmpInfoGetContext context)
         {
             StringBuilder query = new StringBuilder();
-
+            // 削除クエリ
             query.AppendLine($"DELETE FROM {TblSet(TBLNAME.M_EMPMASTER)}");
-            query.AppendLine("WHERE EmpId7 = @EmpId7");
+            query.AppendLine("WHERE retireDate IS NOT NULL"); // retireDate が NULL でないレコードを削除
 
             return query.ToString();
         }

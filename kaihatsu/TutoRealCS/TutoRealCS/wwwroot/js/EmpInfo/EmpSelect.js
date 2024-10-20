@@ -9,68 +9,47 @@
     // 検索ボタンのクリックイベント
     $('.btnSearch').on('click', function (e) {
         e.preventDefault();
-        selectEmployee();
+        searchEmployee();
     });
 
     // 検索処理関数
-    function selectEmployee() {
+    function searchEmployee() {
         var empId = $('#EmpId').val();
-        var deptCode = $('#DeptCode').val();
-        var seiKanji = $('#Seikanji').val();
-        var meiKanji = $('#Meikanji').val();
-        var seiKana = $('#Seikana').val();
-        var meiKana = $('#Meikana').val();
-        var mailAddress = $('#MailAddress').val();
-        var joinDate = $('#JoinDate').val();
 
-        // バリデーション
-        if (!validateForm(empId, deptCode, seiKanji, meiKanji, seiKana, meiKana, mailAddress, joinDate)) {
+        if (!validateForm(empId)) {
             return;
         }
 
         var formData = {
             empId7: empId,
-            deptCode4: deptCode,
-            seiKanji: seiKanji,
-            meiKanji: meiKanji,
-            seiKana: seiKana,
-            meiKana: meiKana,
-            mailAddress: mailAddress,
-            joinDate: joinDate,
             ActionType: 'Search'
         };
 
         $.ajax({
-            url: '/EmpInfo/Regist',
+            url: '/EmpInfo/Regist', 
             type: 'POST',
             contentType: 'application/json',
             data: JSON.stringify(formData),
             success: function (response) {
                 console.log(response.data);
                 if (response.success) {
-                    $('.DataGrid tbody').empty();
-                    response.data.forEach(item => {
-                        $('.DataGrid tbody').append(`
-                            <tr>
-                                <td>${item.empId7}</td>
-                                <td>${item.deptCode4}</td>
-                                <td>${item.seiKanji}</td>
-                                <td>${item.meiKanji}</td>
-                                <td>${item.seiKana}</td>
-                                <td>${item.meiKana}</td>
-                                <td>${item.mailAddress}</td>
-                                <td>${item.joinDate ? new Date(item.joinDate).toLocaleDateString('ja-JP') : ''}</td> 
-                            </tr>
-                        `);
-                    });
+                    // DBの情報を入力フィールドに自動でセット
+                    $('#DeptCode').val(response.data.deptCode4);
+                    $('#Seikanji').val(response.data.seiKanji);
+                    $('#Meikanji').val(response.data.meiKanji);
+                    $('#Seikana').val(response.data.seiKana);
+                    $('#Meikana').val(response.data.meiKana);
+                    $('#MailAddress').val(response.data.mailAddress);
+                    $('#JoinDate').val(response.data.joinDate);
 
                     Swal.fire({
-                        title: `${response.data.length}件ヒットしました`,
+                        title: '検索成功',
+                        text: '情報を取得しました。',
                         icon: 'success',
                         confirmButtonText: 'OK',
                     });
                 } else {
-                    showError('指定された社員番号に該当する情報は見つかりませんでした。');
+                    showError(response.message || '検索処理に失敗しました。');
                 }
             },
             error: function (xhr) {

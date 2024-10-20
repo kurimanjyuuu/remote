@@ -65,7 +65,6 @@ namespace TutoRealBE.Context
         /// </summary>
         public string mailAddress { get; set; } = string.Empty;
 
-
         /// <summary>
         /// 入社日
         /// </summary>
@@ -75,5 +74,11 @@ namespace TutoRealBE.Context
         /// 退職日
         /// </summary>
         public DateTime? retireDate { get; set; } = new DateTime(DateTime.Now.Year, DateTime.Now.Month, 1).AddMonths(1).AddDays(-1);
+
+        /// <summary>
+        ///　更新日時
+        /// </summary>
+        public string updateDatetime { get; set; } = string.Empty;
+
     }
 }

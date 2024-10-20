@@ -69,5 +69,11 @@ namespace TutoRealBE.Context
         /// 退職日
         /// </summary>
         public DateTime? retireDate { get; set; } = new DateTime(DateTime.Now.Year, DateTime.Now.Month, 1).AddMonths(1).AddDays(-1);
+
+        /// <summary>
+        ///　更新日時
+        /// </summary>
+        public string updateDatetime { get; set; } = string.Empty;
+
     }
 }

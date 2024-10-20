@@ -2,6 +2,8 @@
 using Microsoft.Data.SqlClient;
 using Newtonsoft.Json;
 using System.Diagnostics;
+using System.Linq;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using TutoRealBE.Context;
 using TutoRealBE.Entity;
@@ -26,7 +28,7 @@ namespace TutoRealCS.Controllers
         [HttpGet]
         public async Task<IActionResult> Index()
         {
-            return View("EmpInfo"); // ビューを返す
+            return View("EmpInfo");
         }
 
         [HttpPost]
@@ -49,8 +51,8 @@ namespace TutoRealCS.Controllers
                 {
                     case "Register":
                         return await HandleRegister(formData);
-                    case "Update": 
-                        return await HandleRegister(formData);
+                    case "Update":
+                        return await HandleUpdate(formData);
                     case "Search":
                         return await HandleSearch(formData);
                     case "Delete":
@@ -74,65 +76,96 @@ namespace TutoRealCS.Controllers
 
         private async Task<IActionResult> HandleRegister(EmpInfoViewModel formData)
         {
-            Debug.WriteLine("Registerボタンがクリックされました。");
-            Debug.WriteLine($"DeptCode4: {formData.deptCode4}, seiKanji: {formData.seiKanji}, meiKanji: {formData.meiKanji}, seiKana: {formData.seiKana}, meiKana: {formData.meiKana}, mailAddress: {formData.mailAddress}");
-
             var empId = formData.empId7;
-            var existingRecords = await CheckExistingRecord(empId); // 既存レコードの確認メソッドを追加
 
+            // 社員番号のバリデーション
+            if (!Regex.IsMatch(empId, @"^[0-9]{7}$"))
+            {
+                return Json(new { success = false, message = "社員番号は7桁で入力してください。" });
+            }
+
+            // 社員番号が既に存在するかチェック
+            var existingRecords = await CheckExistingRecord(empId);
             if (existingRecords)
             {
-                // 既存レコードが見つかれば更新処理
-                var context = new EmpInfoGetContext()
-                {
-                    ProcessKbn = CE.ProcessKbn.Update,
-                    empId7 = empId,
-                    deptCode4 = formData.deptCode4,
-                    seiKanji = formData.seiKanji,
-                    meiKanji = formData.meiKanji,
-                    seiKana = formData.seiKana,
-                    meiKana = formData.meiKana,
-                    mailAddress = formData.mailAddress,
-                };
-
-                try
-                {
-                    await _baseBF.Invoke(context);
-                    return Json(new { success = true, message = "更新成功" });
-                }
-                catch (SqlException sqlEx)
-                {
-                    Debug.WriteLine($"SQLエラー: {sqlEx.Message}");
-                    return Json(new { success = false, message = "データベースエラー: " + sqlEx.Message });
-                }
+                return Json(new { success = false, message = "既に登録されています。" });
             }
-            else
-            {
-                // 既存レコードが見つからなければ新規登録
-                Debug.WriteLine("対象レコードが見つかりません。新規登録に切り替えます。");
-                var context = new EmpInfoGetContext()
-                {
-                    ProcessKbn = CE.ProcessKbn.Insert,
-                    empId7 = empId,
-                    deptCode4 = formData.deptCode4,
-                    seiKanji = formData.seiKanji,
-                    meiKanji = formData.meiKanji,
-                    seiKana = formData.seiKana,
-                    meiKana = formData.meiKana,
-                    mailAddress = formData.mailAddress,
-                    joinDate = formData.joinDate,
-                };
 
-                try
-                {
-                    await _baseBF.Invoke(context);
-                    return Json(new { success = true, message = "登録成功" });
-                }
-                catch (SqlException sqlEx)
-                {
-                    Debug.WriteLine($"SQLエラー: {sqlEx.Message}");
-                    return Json(new { success = false, message = "データベースエラー: " + sqlEx.Message });
-                }
+            // 登録処理
+            var context = new EmpInfoGetContext()
+            {
+                ProcessKbn = CE.ProcessKbn.Insert,
+                empId7 = empId,
+                deptCode4 = formData.deptCode4,
+                seiKanji = formData.seiKanji,
+                meiKanji = formData.meiKanji,
+                seiKana = formData.seiKana,
+                meiKana = formData.meiKana,
+                mailAddress = formData.mailAddress,
+                joinDate = formData.joinDate,
+            };
+
+            try
+            {
+                await _baseBF.Invoke(context);
+                return Json(new { success = true, message = "登録成功" });
+            }
+            catch (SqlException sqlEx)
+            {
+                Debug.WriteLine($"SQLエラー: {sqlEx.Message}");
+                return Json(new { success = false, message = "データベースエラー: " + sqlEx.Message });
+            }
+        }
+
+        private async Task<IActionResult> HandleUpdate(EmpInfoViewModel formData)
+        {
+            var empId = formData.empId7;
+
+            // 社員番号のバリデーション
+            if (!Regex.IsMatch(empId, @"^[0-9]{7}$"))
+            {
+                return Json(new { success = false, message = "社員番号は7桁で入力してください。" });
+            }
+
+            // 現在のデータを取得
+            var currentData = await GetCurrentData(empId);
+            if (currentData == null)
+            {
+                return Json(new { success = false, message = "指定された社員番号に該当する情報が見つかりませんでした。" });
+            }
+
+            // 検索で取得したupdateDatetimeをチェック
+            var searchedUpdateDatetime = formData.updateDatetime;
+
+            // 既存のupdateDatetimeが変更されていないか確認（楽観ロック）
+            if (currentData.updateDatetime != searchedUpdateDatetime)
+            {
+                return Json(new { success = false, message = "更新失敗: 他のユーザーによって変更されています。" });
+            }
+
+            // 更新処理
+            var context = new EmpInfoGetContext()
+            {
+                ProcessKbn = CE.ProcessKbn.Update,
+                empId7 = empId,
+                deptCode4 = formData.deptCode4,
+                seiKanji = formData.seiKanji,
+                meiKanji = formData.meiKanji,
+                seiKana = formData.seiKana,
+                meiKana = formData.meiKana,
+                mailAddress = formData.mailAddress,
+                retireDate = formData.retireDate,
+            };
+
+            try
+            {
+                await _baseBF.Invoke(context);
+                return Json(new { success = true, message = "更新成功" });
+            }
+            catch (SqlException sqlEx)
+            {
+                Debug.WriteLine($"SQLエラー: {sqlEx.Message}");
+                return Json(new { success = false, message = "データベースエラー: " + sqlEx.Message });
             }
         }
 
@@ -145,48 +178,59 @@ namespace TutoRealCS.Controllers
             };
 
             var existingRecords = await _baseBF.Invoke(selectContext);
-            return existingRecords.Any(); // 存在するかどうかを返す
+            return existingRecords.Any();
+        }
+
+        private async Task<EmpInfoGetResult> GetCurrentData(string empId)
+        {
+            var context = new EmpInfoGetContext()
+            {
+                ProcessKbn = CE.ProcessKbn.Select,
+                empId7 = empId,
+            };
+
+            var existingRecords = await _baseBF.Invoke(context);
+            return existingRecords.FirstOrDefault() as EmpInfoGetResult;
         }
 
         private async Task<IActionResult> HandleSearch(EmpInfoViewModel formData)
         {
-            Debug.WriteLine("Searchボタンがクリックされました。");
-            Debug.WriteLine($"DeptCode4: {formData.deptCode4}, seiKanji: {formData.seiKanji}, meiKanji: {formData.meiKanji}, seiKana: {formData.seiKana}, meiKana: {formData.meiKana}, mailAddress: {formData.mailAddress}, joinDate: {formData.joinDate?.ToString("yyyy/MM/dd") ?? "null"}");
+            var empId = formData.empId7;
 
-            var context = new EmpInfoGetContext()
+            var context = new EmpInfoGetContext
             {
                 ProcessKbn = CE.ProcessKbn.Select,
-                empId7 = formData.empId7,
-                deptCode4 = formData.deptCode4,
-                seiKanji = formData.seiKanji,
-                meiKanji = formData.meiKanji,
-                seiKana = formData.seiKana,
-                meiKana = formData.meiKana,
-                mailAddress = formData.mailAddress,
-                joinDate = formData.joinDate
+                empId7 = empId
             };
 
-            try
-            {
-                var result_bf = await _baseBF.Invoke(context);
-                Debug.WriteLine($"取得したデータ数: {result_bf.Count()}");
+            var results = await _baseBF.Invoke(context);
+            var searchResults = results.Cast<EmpInfoGetResult>().ToList();
 
-                var results = result_bf.Cast<EmpInfoGetResult>().ToList();
-                foreach (var result in results)
+            if (searchResults.Count > 0)
+            {
+                var search = searchResults.First();
+                return Json(new
                 {
-                    Debug.WriteLine($"取得したデータ: empId7={result.empId7}, joinDate={result.joinDate?.ToString("yyyy/MM/dd") ?? "null"}");
-                }
-
-                formData.DataList = results;
-                Debug.WriteLine($"取得したデータ数: {formData.DataList.Count()}");
-
-
-                return Json(new { success = true, message = "検索成功", data = results });
+                    success = true,
+                    message = "検索成功",
+                    data = new
+                    {
+                        empId7 = search.empId7,
+                        deptCode4 = search.deptCode4,
+                        seiKanji = search.seiKanji,
+                        meiKanji = search.meiKanji,
+                        seiKana = search.seiKana,
+                        meiKana = search.meiKana,
+                        mailAddress = search.mailAddress,
+                        joinDate = search.joinDate?.ToString("yyyy-MM-dd"),
+                        retireDate = search.retireDate?.ToString("yyyy-MM-dd"),
+                        updateDatetime = search.updateDatetime // ここで取得したupdateDatetimeを返す
+                    }
+                });
             }
-            catch (Exception ex)
+            else
             {
-                Debug.WriteLine($"エラーが発生しました: {ex}");
-                return Json(new { success = false, message = ex.Message });
+                return Json(new { success = false, message = "指定された社員番号に該当する情報は見つかりませんでした。" });
             }
         }
 
@@ -194,28 +238,32 @@ namespace TutoRealCS.Controllers
         {
             Debug.WriteLine("Deleteボタンがクリックされました。");
 
-            // 入力値のバリデーション
-            if (string.IsNullOrWhiteSpace(formData.empId7) || formData.retireDate == null)
+            if (formData == null)
             {
-                return Json(new { success = false, message = "社員番号と退職日は必須です。" });
+                Debug.WriteLine("formDataはnullです。");
+                return Json(new { success = false, message = "データが正しく受信されていません。" });
             }
 
-            // retireDateをDateTime?に変換
-            DateTime? retireDate = null;
-            if (formData.retireDate.HasValue)
-            {
-                retireDate = formData.retireDate.Value; // null でない場合、値を取得
-            }
+            string empId = formData.empId7;
 
-            var context = new EmpInfoGetContext()
+            var context = new EmpInfoGetContext
             {
                 ProcessKbn = CE.ProcessKbn.Delete,
-                empId7 = formData.empId7,
-                retireDate = retireDate 
+                empId7 = empId
             };
 
+            Debug.WriteLine($"一括削除処理を実行: empId={empId}");
+
             await _baseBF.Invoke(context);
-            return Json(new { success = true, message = "削除成功" });
+            return Json(new { success = true, message = "削除しました。" });
+        }
+    }
+
+    public static class DateTimeExtensions
+    {
+        public static DateTime TruncateToSeconds(this DateTime dateTime)
+        {
+            return new DateTime(dateTime.Year, dateTime.Month, dateTime.Day, dateTime.Hour, dateTime.Minute, dateTime.Second);
         }
     }
 }

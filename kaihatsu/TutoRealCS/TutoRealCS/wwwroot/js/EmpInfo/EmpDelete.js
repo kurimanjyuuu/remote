@@ -9,24 +9,30 @@
     // 削除ボタンのクリックイベント
     $('.btnDelete').on('click', function (e) {
         e.preventDefault();
-        deleteEmployee();
+        confirmDelete();
     });
+
+    // 確認ダイアログ関数
+    function confirmDelete() {
+        Swal.fire({
+            title: '本当に削除しますか？',
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonText: 'はい',
+            cancelButtonText: 'いいえ'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                deleteEmployee();
+            }
+        });
+    }
 
     // 削除関数
     function deleteEmployee() {
-        var empId = $('#EmpId').val();
-        var retireDate = $('#RetireDate').val();
+        var empId = $('#EmpId').val().trim();
+        console.log({ empId7: empId, ActionType: 'Delete' });
 
-        // バリデーションを追加
-        if (!validateForm(empId, retireDate)) {
-            return;
-        }
-
-        var formData = {
-            empId7: empId,
-            retireDate: retireDate,
-            ActionType: 'Delete'
-        };
+        var formData = { empId7: empId, ActionType: 'Delete' };
 
         $.ajax({
             url: '/EmpInfo/Regist',
@@ -50,26 +56,6 @@
                 showError('削除処理に失敗しました。' + xhr.status + ': ' + xhr.statusText);
             }
         });
-    }
-
-    // すべての必須項目が入力されているかチェック
-    function validateForm(empId, retireDate) {
-        let errorMessage = '';
-
-        if (!empId && !retireDate) {
-            errorMessage = '社員番号と退職日を入力してください。';
-        } else if (!empId) {
-            errorMessage = '社員番号は必須です。';
-        } else if (!retireDate) {
-            errorMessage = '退職日は必須です。';
-        }
-
-        if (errorMessage) {
-            showError(errorMessage);
-            return false;
-        }
-
-        return true;
     }
 
     // エラーメッセージ表示関数

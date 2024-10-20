@@ -47,20 +47,23 @@ namespace TutoRealCS.Models
         /// <summary>
         /// 入社日
         /// </summary>
-        public DateTime? joinDate { get; set; } = new DateTime(DateTime.Now.Year, DateTime.Now.Month, 1); 
+        public DateTime? joinDate { get; set; } = new DateTime (DateTime.Now.Year, DateTime.Now.Month, 1);
 
         /// <summary>
         /// 退職日
         /// </summary>
-        public DateTime? retireDate { get; set; } = new DateTime(DateTime.Now.Year, DateTime.Now.Month, 1).AddMonths(1).AddDays(-1);
+        public DateTime? retireDate { get; set; } = new DateTime(DateTime.Now.Year, DateTime.Now.Month, 1).AddMonths(1).AddDays(-1); 
+
+
+        /// <summary>
+        ///　更新日時
+        /// </summary>
+        public string updateDatetime { get; set; } = string.Empty;
 
         /// <summary>
         /// アクションタイプ
         /// </summary>
         public string ActionType { get; set; } = string.Empty;
-
-        [JsonIgnore]
-        public List<EmpInfoGetResult> DataList = new List<EmpInfoGetResult>();
     
     }
 }
